@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @layer utilities{
-    
+    .ul_menu{
+        transition: all 0.06s ease-out;
+    }
     .list_menu:hover .ul_menu{
         visibility: visible;
     }

@@ -15,13 +15,13 @@ export default function Navbar() {
     },[])
     return (
     <>
-        <div className='flex justify-between items-center p-5 mx-10 md:text-3xl sm:text-2xl text-lg'>
-            <div className="right flex sm:gap-14 gap-5">
+        <div className='flex justify-between items-center p-5 md:text-3xl sm:text-2xl text-lg'>
+            <div className="right flex gap-2 md:gap-8">
                 {
                     data.map(item=>{
                         return(
-                                <Link key={item._id} className='relative list_menu p-3' to={item.href}>{item.title} {item.submenus.length ? (<><i className='absolute top-4 mx-1'><IoIosArrowDown /></i>
-                                <ul className='list-none p-7 bg-slate-400 flex flex-col gap-5 top-14 rounded-lg absolute w-[300px] ul_menu invisible'>
+                                <Link key={item._id} className='relative list_menu px-3 py-4 text-lg sm:text-xl lg:text-3xl' to={item.href}>{item.title} {item.submenus.length ? (<><i className='absolute top-5 mx-1'><IoIosArrowDown /></i>
+                                <ul className='list-none bg-slate-400 md:w-[25rem] w-[16rem] p-5 flex flex-col gap-5 top-[4.5rem] rounded-lg absolute z-10 ul_menu invisible'>
                                        {item.submenus.map((submenu)=>(<li className='item_menu' key={submenu._id}>
                                         <Link className='text-white' to={submenu.href}>{submenu.title}</Link></li>))}
                                     </ul></>) : "" }
