@@ -5,6 +5,7 @@ import Landing from '../../Components/Landing/Landing'
 import SectionTitle from '../../Components/sectionTitle/SectionTitle'
 import LastedCourse from '../../Components/LastedCourse/LastedCourse'
 import Help from '../../Components/Help/Help'
+import PopularCourse from '../../Components/PopularCourse/PopularCourse'
 
 
 export default function MainPage() {
@@ -18,6 +19,7 @@ export default function MainPage() {
        <LastedCourse />
        <SectionTitle title="جدیدترین دوره ها" descrip="از اونجایی که آکادمی آموزشی وب لرن یک آکادمی خصوصی هست" />
        <Help />
+       <PopularCourse />
     </>
   )
 }
