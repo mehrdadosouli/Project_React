@@ -2,11 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+    
+}
 @layer utilities{
     .ul_menu{
         transition: all 0.06s ease-out;
     }
     .list_menu:hover .ul_menu{
         visibility: visible;
+    }
+    .container{
+        width: 80%;
+        margin: auto;
+    }
+    .befores{
+        content: "";
+        width: 5px;
+        height: 40px;
+        background-color: antiquewhite;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: translateX(15px) rotate(20deg);
     }
 }

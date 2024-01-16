@@ -8,4 +8,5 @@ const navbarMenuRandom=(data,num)=>{
     )
 }
 
+
 export {navbarMenuRandom}

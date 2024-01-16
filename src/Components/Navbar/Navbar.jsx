@@ -20,11 +20,11 @@ export default function Navbar() {
                 {
                     data.map(item=>{
                         return(
-                                <Link key={item._id} className='relative list_menu px-3 py-4 text-lg sm:text-xl lg:text-3xl' to={item.href}>{item.title} {item.submenus.length ? (<><i className='absolute top-5 mx-1'><IoIosArrowDown /></i>
+                                <Link key={item._id} className='relative list_menu px-3 py-4 text-lg sm:text-xl lg:text-3xl' to={item.href}>{item.title} {item.submenus.length !==0 && (<><i className='absolute top-5 mx-1'><IoIosArrowDown /></i>
                                 <ul className='list-none bg-slate-400 md:w-[25rem] w-[16rem] p-5 flex flex-col gap-5 top-[4.5rem] rounded-lg absolute z-10 ul_menu invisible'>
                                        {item.submenus.map((submenu)=>(<li className='item_menu' key={submenu._id}>
                                         <Link className='text-white' to={submenu.href}>{submenu.title}</Link></li>))}
-                                    </ul></>) : "" }
+                                    </ul></>) }
                                 </Link> 
                         )
                     })
