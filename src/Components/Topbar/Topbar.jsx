@@ -11,7 +11,7 @@ export default function Topbar() {
     },[])
     return (
     <>
-        <div className='flex justify-between items-center p-5 bg-gray-400 md:text-2xl text-sm sm:text-2xl'>
+        <div className='flex justify-between items-center p-5 bg-gray-400 md:text-2xl text-sm sm:text-2xl overflow-hidden'>
             <div className="right">
                 <ul className='ul flex sm:gap-5 gap-2 mx-5'>
                     {

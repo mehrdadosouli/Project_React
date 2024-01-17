@@ -43,21 +43,21 @@ export default function Landing() {
                     <FaBook className='text-white text-5xl'/>
                     <div className="sm:text-white text-4xl font-bold text-white mt-1 flex flex-col">
                         <LandingCounter  num="50" />
-                        <span>کاربر توی سبزلرن ثبت نام کردن</span>
+                        <span className='text-xl lg:text-3xl'>کاربر توی سبزلرن ثبت نام کردن</span>
                     </div>
                 </div>
                 <div className='flex flex-col gap-5'>
                     <FaBook className='text-white text-5xl'/>
                     <div className="sm:text-white text-4xl font-bold text-white mt-1 flex flex-col">
                         <LandingCounter  num="100" />
-                        <span>دوره آموزشی داریم</span>
+                        <span className='text-xl lg:text-3xl'>دوره آموزشی داریم</span>
                     </div>
                 </div>
                 <div className='flex flex-col gap-5'>
                     <FaBook className='text-white text-5xl'/>
                     <div className="sm:text-white text-4xl font-bold text-white mt-1 flex flex-col">
                         <LandingCounter  num="150" />
-                        <span>دقیقه آموزش تولید کردیم</span>
+                        <span className='text-xl lg:text-3xl'>دقیقه آموزش تولید کردیم</span>
                     </div>
                 </div>
             </div>

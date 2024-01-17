@@ -17,6 +17,11 @@ export default function PopularCourse() {
     <div className='flex flex-wrap container gap-5'>
             <Swiper
                 slidesPerView={3}
+                breakpoints= {{
+                    100: { slidesPerView: 1},
+                    768: { slidesPerView: 2},
+                    1023: {slidesPerView: 3}
+                  }}
                 spaceBetween={30}
                 zoom='true'
                 loop={true}

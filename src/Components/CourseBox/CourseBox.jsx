@@ -8,7 +8,7 @@ import uuid from 'react-uuid';
 export default function CourseBox(props) {
  
 return (
-        <div className={`flex flex-col ${props.isSlider ? 'w-[100%]' : 'w-[32.6%]'} shadow-lg rounded-2xl overflow-hidden md:mb-10 mb-2 hover:transform hover:translate-y-[-10px] hover:transition-transform `}>
+        <div className={`flex flex-col ${props.isSlider ? 'w-[100%]' : 'lg:w-[32%] md:w-[48.5%] w-[100%]'} shadow-lg rounded-2xl overflow-hidden md:mb-10 mb-2 hover:transform hover:translate-y-[-10px] hover:transition-transform `}>
                     <img src={`http://localhost:4000/courses/covers/${props.cover}`} alt="" className='w-full h-[20rem] object-cover' />
                         <span className='p-2'>{props.name}</span>
                         <div className='flex justify-between items-center p-2'>
