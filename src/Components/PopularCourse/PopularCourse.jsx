@@ -6,7 +6,6 @@ import "swiper/css";
 import 'swiper/css/autoplay';
 
 export default function PopularCourse() {
-    const swiper = useSwiper();
     const [course,setCourse]=useState([])
     useEffect(()=>{
         axios.get('http://localhost:4000/v1/courses/popular')
@@ -14,7 +13,7 @@ export default function PopularCourse() {
     },[])
 
   return (
-    <div className='flex flex-wrap container gap-5'>
+    <div className='container gap-5'>
             <Swiper
                 slidesPerView={3}
                 breakpoints= {{
@@ -24,13 +23,14 @@ export default function PopularCourse() {
                   }}
                 spaceBetween={30}
                 zoom='true'
+                pagination={{ clickable: true }}
                 loop={true}
                 className="w-full"
-                pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
-                autoplay={{
-                    disableOnInteraction: false,
-                  }}
+                autoplay= {{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
               >
         {
             course.map(item=>

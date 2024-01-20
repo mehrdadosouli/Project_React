@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";

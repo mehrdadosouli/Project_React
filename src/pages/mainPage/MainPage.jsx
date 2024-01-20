@@ -6,6 +6,7 @@ import SectionTitle from '../../Components/sectionTitle/SectionTitle'
 import LastedCourse from '../../Components/LastedCourse/LastedCourse'
 import Help from '../../Components/Help/Help'
 import PopularCourse from '../../Components/PopularCourse/PopularCourse'
+import PreSellCourse from '../../Components/PreSellCourse/PreSellCourse'
 
 
 export default function MainPage() {
@@ -15,11 +16,16 @@ export default function MainPage() {
        <Topbar />
        <Navbar />
        <Landing />
-       <SectionTitle title="جدیدترین دوره ها" descrip="ما چه کمکی بهتون میکنیم؟" btn="تمامی دوره ها"/>
+       <SectionTitle title="جدیدترین دوره ها" descrip="سکوی پرتاپ شما به سمت موفقیت" btn="تمامی دوره ها"/>
        <LastedCourse />
-       <SectionTitle title="جدیدترین دوره ها" descrip="از اونجایی که آکادمی آموزشی وب لرن یک آکادمی خصوصی هست" />
+       <SectionTitle title="ما چه کمکی بهتون میکنیم؟" descrip="از اونجایی که آکادمی آموزشی وب لرن یک آکادمی خصوصی هست" />
        <Help />
+       <SectionTitle title="محبوب ترین دوره ها"  />
        <PopularCourse />
+       <SectionTitle title="دوره های در حال پیش فروش" />
+       <PreSellCourse />
+       <SectionTitle title="جدیدترین مقاله ها" descrip="پیش به سوی ارتقای دانش" btn="تمامی مقاله ها"/>
+
     </>
   )
 }
