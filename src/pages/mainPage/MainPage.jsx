@@ -7,6 +7,7 @@ import LastedCourse from '../../Components/LastedCourse/LastedCourse'
 import Help from '../../Components/Help/Help'
 import PopularCourse from '../../Components/PopularCourse/PopularCourse'
 import PreSellCourse from '../../Components/PreSellCourse/PreSellCourse'
+import LastArticles from '../../Components/LastArticles/LastArticles'
 
 
 export default function MainPage() {
@@ -25,6 +26,7 @@ export default function MainPage() {
        <SectionTitle title="دوره های در حال پیش فروش" />
        <PreSellCourse />
        <SectionTitle title="جدیدترین مقاله ها" descrip="پیش به سوی ارتقای دانش" btn="تمامی مقاله ها"/>
+       <LastArticles />
 
     </>
   )
