@@ -15,7 +15,7 @@ export default function Landing() {
   return (
     <>
         <div className='sticky sm:bg-bg_landing w-full h-[30rem] sm:h-[52.5rem] md:h-[61.9rem] bg-bg_landing_mobile bg-top bg-no-repeat sm:bg-cover sm:bg-center bg-fixed'>
-            <h1 className="font-extrabold landing__title absolute lg:top-[70%] lg:left-[30%] top-[60%] left-[20%] text-white md:text-6xl sm:text-4xl text-3xl">
+            <h1 className="font-extrabold landing__title absolute lg:top-[65%] lg:left-[30%] top-[60%] left-[20%] text-white md:text-6xl sm:text-4xl text-3xl">
             <Typewriter
                 onInit={(typeWriter) => {
                 typeWriter
@@ -38,7 +38,7 @@ export default function Landing() {
                 <span className='absolute left-[2%] bottom-0 top-[20%] text-4xl text-green-400'><IoSearchOutline className='hover:cursor-pointer' onClick={searchHandler}/></span>
             </div>
 
-            <div className='flex w-[100%] text-center justify-evenly mx-auto absolute left-0 right-0 bottom-0 [&>*]:flex [&>*]:flex-col [&>*]:items-center mb-5 invisible sm:visible'>
+            <div className='flex w-[100%] text-center justify-evenly mx-auto absolute left-0 right-0 bottom-10 [&>*]:flex [&>*]:flex-col [&>*]:items-center mb-5 invisible sm:visible'>
                 <div className='flex flex-col gap-5'>
                     <FaBook className='text-white text-5xl'/>
                     <div className="sm:text-white text-4xl font-bold text-white mt-1 flex flex-col">

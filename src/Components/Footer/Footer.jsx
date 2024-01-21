@@ -35,8 +35,9 @@ export default function Footer() {
                 <div><Link to="/course-info/py-expert">آموزش Pyton</Link></div>
             </div>
         <div>
-        <Formik initialValues={{email:''}} onSubmit={(values,{setSubmitting})=>{
-            console.log(values);
+        <Formik 
+        initialValues={{email:''}} 
+        onSubmit={(values,{setSubmitting})=>{
             axios.post('http://localhost:4000/v1/newsletters',values,{
                 Headers:{
                     "Content-Type":"application/json"
@@ -49,7 +50,8 @@ export default function Footer() {
                     })
                 }
             })
-        }} validate={(values)=>{
+        }} 
+        validate={(values)=>{
                 const errors={}
                 if(values.email===""){
                     errors.email="لطفا ایمیل راوارد کنید"
