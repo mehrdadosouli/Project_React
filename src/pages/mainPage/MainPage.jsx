@@ -8,6 +8,7 @@ import Help from '../../Components/Help/Help'
 import PopularCourse from '../../Components/PopularCourse/PopularCourse'
 import PreSellCourse from '../../Components/PreSellCourse/PreSellCourse'
 import LastArticles from '../../Components/LastArticles/LastArticles'
+import Footer from '../../Components/Footer/Footer'
 
 
 export default function MainPage() {
@@ -27,6 +28,7 @@ export default function MainPage() {
        <PreSellCourse />
        <SectionTitle title="جدیدترین مقاله ها" descrip="پیش به سوی ارتقای دانش" btn="تمامی مقاله ها"/>
        <LastArticles />
+       <Footer />
 
     </>
   )
