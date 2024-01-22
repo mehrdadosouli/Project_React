@@ -1,13 +1,16 @@
 import React from 'react'
 import {Formik, Form , Field,ErrorMessage } from 'formik'
-import { Link } from 'react-router-dom'
+import { Link , Navigate, useNavigate} from 'react-router-dom'
+import axios from 'axios'
+import Swal from 'sweetalert2'
 export default function Login() {
-    
+   
+    const navigate=useNavigate()
   return (
     <div className='flex md:flex-row flex-col-reverse items-center container md:h-screen h-full'>
         <div className='flex md:w-1/2 w-full p-10 items-center'>
             <Formik 
-            initialValues={{name:'',email:'',checkbox:false}}
+            initialValues={{password:'',email:'',checkbox:false}}
             validate={(values)=>{
                 const errors={}
                 if(values.email===""){
@@ -17,19 +20,45 @@ export default function Login() {
                 }else if(!/[a-z0-9]{5}@(gmail|email)+\.com/gi.test(values.email)){
                     errors.email="لطفا ایمیل را درست وارد کنید"
                 }
-                if(values.name===""){
-                    errors.name="اسم خود را وارد کنید"
+                if(values.password===""){
+                    errors.password="پسورد خود را وارد کنید"
                 }
                 return errors
             }}
-            onSubmit={(values)=>{console.log(values)}}>
-            {({})=>(
+            onSubmit={(values)=>{
+                const data={
+                    identifier:values.email,
+                    password:values.password
+                }
+                axios.post('http://localhost:4000/v1/auth/login',data)
+                .then(res=>{if(res.status==200){
+                    Swal.fire({
+                        title: "با موفقیت لاگین شدید",
+                        icon: "success",
+                        button:'ok'
+                    }).then(()=>{
+                        navigate("/")
+                    })
+                }}).catch(()=>{
+                    Swal.fire({
+                        title: "همچین یوزری نداریم",
+                        icon: "error",
+                        button:'ok'
+                    }).then(()=>{
+                        let passwords=document.querySelector('#password')
+                        let emails=document.querySelector('#email')
+                        passwords.value=""
+                        emails.value=""
+                    })
+                })
+            }}>
+            {({touched,errors})=>(
                 <Form className='flex flex-col gap-10 w-full'>
                     <h1 className='font-extrabold text-5xl'>Login</h1>
-                    <Field className="border border-gray-400 border-solid p-5" placeholder="اسم خود را وارد کنید" type="text" name="name" />
-                    <ErrorMessage name='name' component='h3' />
-                    <Field className="border border-gray-400 border-solid p-5" type="email" placeholder="ایمیل خود را وارد کنید" name="email" />
+                    <Field id="email" className={(touched.email && errors.email) ? "border border-red-400 border-solid p-5" : "border border-gray-400 border-solid p-5"} type="email" autoComplete="on" placeholder="ایمیل خود را وارد کنید" name="email" />
                     <ErrorMessage name='email' component='h3' />
+                    <Field id="password" className={(touched.password && errors.password) ? "border border-red-400 border-solid p-5" : "border border-gray-400 border-solid p-5"} autoComplete="on" placeholder="پسورد خود را وارد کنید" type="password" name="password" />
+                    {errors.password && touched.password && errors.password}
                     <div className='flex items-center gap-5'><Field type="checkbox" name="checkbox" /> من را ذخیره کن  </div>
                     <button type='submit' className='p-3 bg-green-500 text-white w-[150px] rounded-xl'>ارسال</button>
                     <div> ایا حساب کاربری دارید؟<Link to='/register' className='underline'> ثبت نام </Link></div>
