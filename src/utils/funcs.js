@@ -10,7 +10,23 @@ const navbarMenuRandom=(data,num)=>{
     )
 }
 
+const getToken=(user)=>{
+    const userInfo=JSON.parse(localStorage.getItem(user))
+    return userInfo ? userInfo.token : null 
+}
 
+const setToLocalStorage=(key,value)=>{
+    return localStorage.setItem(key,JSON.stringify(value))
+}
 
+const getMe=async()=>{
+   const userinfo=await axios.get('http://localhost:4000/v1/auth/me',{
+        headers:{
+            Authorization:`Bearer ${getToken('user')}`
+        }
+    })
+    const result=await userinfo.data
+    return result
+}
 
-export {navbarMenuRandom}
+export {navbarMenuRandom ,getToken ,setToLocalStorage,getMe}

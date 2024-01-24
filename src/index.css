@@ -6,6 +6,16 @@
     
 }
 @layer utilities{
+    .afterSpan{
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        width: 1rem;
+        height: 1rem;
+        background-color: aqua;
+        
+    }
     .ul_menu{
         transition: all 0.06s ease-out;
     }

@@ -1,8 +1,12 @@
 import {createContext} from 'react'
-
+import { getMe } from '../utils/funcs';
 const AuthContext = createContext({
     Islogin:false,
-    userInfo:'mehrdad',
+    username:'',
+    name:'',
+    email:'',
+    password:'',
+    role:'',
     token:null
 })
 

@@ -3,17 +3,30 @@ import AuthContext from '../../context/AuthContext'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { IoIosArrowDown } from "react-icons/io";
+import { getMe } from '../../utils/funcs';
 
 export default function Navbar() {
+
     const authContext=useContext(AuthContext)
     const [data,setData]=useState([])
-    useEffect(()=>{
-           const fetch=async()=>{
-                const dataa=await axios.get('http://localhost:4000/v1/menus')
-                const res=await dataa.data
-                setData(res)
-            }
-            fetch()
+    const fetch=async()=>{
+        const dataa=await axios.get('http://localhost:4000/v1/menus')
+        const res=await dataa.data
+        setData(res)
+    }
+    const load=async()=>{
+        await getMe().then(res=>{
+            authContext.Islogin=true;
+            authContext.username=res.username;
+            authContext.email=res.email;
+            authContext.name=res.name;
+            authContext.role=res.role;
+            authContext.token=JSON.stringify(res.accessToken);
+        })
+        await fetch()
+    }
+    useEffect(()=>{  
+        load() 
     },[])
     return (
     <>
@@ -34,7 +47,7 @@ export default function Navbar() {
             </div>
             <div className="left border-green-400 border-solid border p-5 rounded-lg ">
                 {
-                    !authContext.Islogin ? <Link to="/login" >Login</Link> : authContext.userInfo
+                    !authContext.Islogin ? <Link to="/login" >Login</Link> : authContext.name
                 }
             </div>
         </div>

@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Formik, Form , Field,ErrorMessage } from 'formik'
-import { Link , Navigate, useNavigate} from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import AuthContext from '../../context/AuthContext'
 export default function Login() {
-   
+    const authContext=useContext(AuthContext)
     const navigate=useNavigate()
   return (
     <div className='flex md:flex-row flex-col-reverse items-center container md:h-screen h-full'>
@@ -36,8 +37,10 @@ export default function Login() {
                         title: "با موفقیت لاگین شدید",
                         icon: "success",
                         button:'ok'
+                        
                     }).then(()=>{
-                        navigate("/")
+                        navigate("/");
+                        authContext.Islogin=true;
                     })
                 }}).catch(()=>{
                     Swal.fire({
