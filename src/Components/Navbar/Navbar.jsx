@@ -4,32 +4,23 @@ import { Link } from 'react-router-dom'
 import { IoIosArrowDown } from "react-icons/io";
 import { AuthInfosContext } from '../../context/AuthContext';
 
-// import { getMe } from '../../utils/funcs';
-
 export default function Navbar() {
 
-    const ress=useContext(AuthInfosContext)
-    
-    // const authContext=useContext(AuthContext)
+    const info=useContext(AuthInfosContext)
+    const [user,setUser]=useState({})
     const [data,setData]=useState([])
     const fetch=async()=>{
         const dataa=await axios.get('http://localhost:4000/v1/menus')
         const res=await dataa.data
         setData(res)
+        setUser(info.infos)
     }
-    // const getInfo=async()=>{
-    //    await getMe().then(res=>{
-    //        console.log(res);
-    //     })
-    // }
     const load=async()=>{
-        // await getInfo()
         await fetch()
     }
     useEffect(()=>{  
-        console.log(ress);
         load() 
-    },[])
+    },[user])
     return (
     <>
         <div className='flex justify-between items-center p-5 md:text-3xl sm:text-2xl text-lg'>
@@ -49,7 +40,7 @@ export default function Navbar() {
             </div>
             <div className="left border-green-400 border-solid border p-5 rounded-lg ">
                 {
-                    // !getMe.Islogin ? <Link to="/login" >Login</Link> : authContext.name
+                    !user.Islogin ? <Link to="/login" >Login</Link> : user.name
                 }
             </div>
         </div>

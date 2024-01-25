@@ -3,11 +3,9 @@ import {Formik, Form , Field,ErrorMessage } from 'formik'
 import { Link , useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import Swal from 'sweetalert2'
-// import AuthContext from '../../context/AuthContext'
-// import { getMe } from '../../utils/funcs'
+
 
 export default function Login() {
-    // const authContext=useContext(AuthContext)
     const navigate=useNavigate()
   return (
     <div className='flex md:flex-row flex-col-reverse items-center container md:h-screen h-full'>
@@ -40,17 +38,7 @@ export default function Login() {
                         title: "با موفقیت لاگین شدید",
                         icon: "success",
                         button:'ok'
-                        
                     })
-                    // getMe().then(res=>{
-                    //     authContext.Islogin=true;
-                    //     authContext.Islogin=true;
-                    //     authContext.username=res.username;
-                    //     authContext.email=res.email;
-                    //     authContext.name=res.name;
-                    //     authContext.role=res.role;
-                    //     authContext.token=JSON.stringify(res.accessToken);
-                    // })
                     .then(()=>{
                         navigate("/");
                     })

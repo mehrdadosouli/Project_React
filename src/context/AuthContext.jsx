@@ -16,7 +16,7 @@ import { getToken } from '../utils/funcs';
 import axios from 'axios';
 export const AuthInfosContext = createContext();
 
-export default function AuthContext({Children}) {
+export default function AuthContext({children}) {
     const [infos,setInfos]=useState({
         Islogin:false,
         username:'',
@@ -48,7 +48,7 @@ export default function AuthContext({Children}) {
     },[])
             
   return (<AuthInfosContext.Provider value={{infos,setInfos}}>
-            {Children}
+            {children}
         </AuthInfosContext.Provider>
   )
 }

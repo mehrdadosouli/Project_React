@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {Formik, Form , Field,ErrorMessage } from 'formik'
 import { Link , useNavigate} from 'react-router-dom'
 import axios from 'axios'
@@ -58,7 +58,6 @@ export default function Register() {
                         button:'ok'
                         
                     }).then(()=>{
-                        authContext.password=values.password
                         setToLocalStorage('user',{token:res.data.accessToken})
                         navigate("/");
                     })
@@ -69,18 +68,18 @@ export default function Register() {
                         button:'ok'
                     })
                     .then(()=>{
-                        // let names=document.querySelector('#name')
-                        // let usernames=document.querySelector('#username')
-                        // let phones=document.querySelector('#phone')
-                        // let confirmpasswords=document.querySelector('#confirmpassword')
-                        // let passwords=document.querySelector('#password')
-                        // let emails=document.querySelector('#email')
-                        // passwords.value=""
-                        // emails.value=""
-                        // phones.value=""
-                        // names.value=""
-                        // confirmpasswords.value=""
-                        // usernames.value=""
+                        let names=document.querySelector('#name')
+                        let usernames=document.querySelector('#username')
+                        let phones=document.querySelector('#phone')
+                        let confirmpasswords=document.querySelector('#confirmpassword')
+                        let passwords=document.querySelector('#password')
+                        let emails=document.querySelector('#email')
+                        passwords.value=""
+                        emails.value=""
+                        phones.value=""
+                        names.value=""
+                        confirmpasswords.value=""
+                        usernames.value=""
                         
                     })
                 })
