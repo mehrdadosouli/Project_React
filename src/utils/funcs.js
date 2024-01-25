@@ -1,4 +1,4 @@
-import axios from "axios";
+
 
 const navbarMenuRandom=(data,num)=>{
     let ul=document.querySelector('.ul')
@@ -19,14 +19,6 @@ const setToLocalStorage=(key,value)=>{
     return localStorage.setItem(key,JSON.stringify(value))
 }
 
-const getMe=async()=>{
-   const userinfo=await axios.get('http://localhost:4000/v1/auth/me',{
-        headers:{
-            Authorization:`Bearer ${getToken('user')}`
-        }
-    })
-    const result=await userinfo.data
-    return result
-}
 
-export {navbarMenuRandom ,getToken ,setToLocalStorage,getMe}
+
+export {navbarMenuRandom ,getToken ,setToLocalStorage}

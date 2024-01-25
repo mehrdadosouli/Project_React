@@ -3,12 +3,10 @@ import {Formik, Form , Field,ErrorMessage } from 'formik'
 import { Link , useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import Swal from 'sweetalert2'
-import AuthContext from '../../context/AuthContext'
-import { getMe, setToLocalStorage } from '../../utils/funcs'
+import {  setToLocalStorage } from '../../utils/funcs'
 
 export default function Register() {
-    const authContext=useContext(AuthContext)
-    console.log(getMe());
+
     const navigate=useNavigate()
   return (
     <div className='flex md:flex-row flex-col-reverse items-center container md:h-screen h-full'>

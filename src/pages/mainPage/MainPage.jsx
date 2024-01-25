@@ -29,7 +29,6 @@ export default function MainPage() {
        <SectionTitle title="جدیدترین مقاله ها" descrip="پیش به سوی ارتقای دانش" btn="تمامی مقاله ها"/>
        <LastArticles />
        <Footer />
-
     </>
   )
 }
