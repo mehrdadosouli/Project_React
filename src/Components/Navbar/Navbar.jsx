@@ -43,7 +43,7 @@ export default function Navbar() {
             </div>
             <div className="left ">
                 {
-                    !user.Islogin ? (<span className='border-green-400 border-solid border p-5 rounded-lg'><Link to="/login" >Login</Link></span>) : (<span className='border-green-400 border-solid border p-5 rounded-lg'>{user.name}</span>)
+                    !user.Islogin ? (<span className='border-green-400 border-solid border p-5 rounded-lg'><Link to="/login" >Login</Link></span>) : (<Link to='/mypanel' className='border-green-400 border-solid border p-5 rounded-lg'>{user.name}</Link>)
                 }
                 {
                     user.Islogin && <Link onClick={logOutHandler} to='/login' className='border-green-400 border-solid border p-5 rounded-lg ml-3'>LogOut</Link>
