@@ -3,23 +3,26 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { IoIosArrowDown } from "react-icons/io";
 import { AuthInfosContext } from '../../context/AuthContext';
+import { clearLocalStorage } from '../../utils/funcs';
 
 export default function Navbar() {
 
     const info=useContext(AuthInfosContext)
     const [user,setUser]=useState({})
     const [data,setData]=useState([])
+    const logOutHandler=()=>{
+        clearLocalStorage()
+    }
     const fetch=async()=>{
         const dataa=await axios.get('http://localhost:4000/v1/menus')
         const res=await dataa.data
         setData(res)
         setUser(info.infos)
     }
-    const load=async()=>{
-        await fetch()
-    }
+   
     useEffect(()=>{  
-        load() 
+        fetch()
+
     },[user])
     return (
     <>
@@ -38,9 +41,12 @@ export default function Navbar() {
                     })
                 }
             </div>
-            <div className="left border-green-400 border-solid border p-5 rounded-lg ">
+            <div className="left ">
                 {
-                    !user.Islogin ? <Link to="/login" >Login</Link> : user.name
+                    !user.Islogin ? (<span className='border-green-400 border-solid border p-5 rounded-lg'><Link to="/login" >Login</Link></span>) : (<span className='border-green-400 border-solid border p-5 rounded-lg'>{user.name}</span>)
+                }
+                {
+                    user.Islogin && <Link onClick={logOutHandler} to='/login' className='border-green-400 border-solid border p-5 rounded-lg ml-3'>LogOut</Link>
                 }
             </div>
         </div>

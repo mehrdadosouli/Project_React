@@ -19,6 +19,8 @@ const setToLocalStorage=(key,value)=>{
     return localStorage.setItem(key,JSON.stringify(value))
 }
 
+const clearLocalStorage=()=>{
+    return localStorage.clear()
+}
 
-
-export {navbarMenuRandom ,getToken ,setToLocalStorage}
+export {navbarMenuRandom ,getToken ,setToLocalStorage,clearLocalStorage}

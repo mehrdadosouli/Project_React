@@ -3,6 +3,8 @@ import {Formik, Form , Field,ErrorMessage } from 'formik'
 import { Link , useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { setToLocalStorage } from '../../utils/funcs'
+
 
 
 export default function Login() {
@@ -33,7 +35,7 @@ export default function Login() {
                 }
                 axios.post('http://localhost:4000/v1/auth/login',data)
                 .then(res=>{if(res.status==200){
-                    
+                    setToLocalStorage('user',{token:res.data.accessToken})
                     Swal.fire({
                         title: "با موفقیت لاگین شدید",
                         icon: "success",
