@@ -1,5 +1,3 @@
-
-
 const navbarMenuRandom=(data,num)=>{
     let ul=document.querySelector('.ul')
     const randomNum=[...data].sort((a,b)=>0.5 - Math.random())

@@ -9,6 +9,9 @@ export default {
       backgroundImage:{
         'bg_landing':"url('assets/image/img.jpg')",
         'bg_landing_mobile':"url('assets/image/1.gif')"
+      },
+      backgroundColor:{
+        'bg-panel':'#28293D'
       }
     },
   },

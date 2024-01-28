@@ -17,7 +17,8 @@ function App() {
         <Route path='/' element={<MainPage />} /> 
         <Route path='/login' element={<Login />} /> 
         <Route path='/register' element={<Register />} /> 
-        <Route path='/register' element={<MyPanel />} /> 
+        <Route path='/mypanel' element={<MyPanel />} /> 
+        <Route path='/mypanel' element={<MyPanel />} /> 
       </Routes>      
       </AuthContext>
     </>

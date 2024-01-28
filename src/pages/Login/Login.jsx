@@ -17,11 +17,9 @@ export default function Login() {
             validate={(values)=>{
                 const errors={}
                 if(values.email===""){
-                    errors.email="لطفا ایمیل راوارد کنید"
+                    errors.email="لطفا ایمیل یا یوزر خود راوارد کنید"
                 }else if(values.email.length < 5){
-                    errors.email="تعداد کاراکتر ایمیل کمتر از 5 تا است"
-                }else if(!/[a-z0-9]{5}@(gmail|email)+\.com/gi.test(values.email)){
-                    errors.email="لطفا ایمیل را درست وارد کنید"
+                    errors.email="تعداد کاراکتر کمتر از 5 تا است"
                 }
                 if(values.password===""){
                     errors.password="پسورد خود را وارد کنید"
@@ -60,7 +58,7 @@ export default function Login() {
             {({touched,errors})=>(
                 <Form className='flex flex-col gap-10 w-full'>
                     <h1 className='font-extrabold text-5xl'>Login</h1>
-                    <Field id="email" className={(touched.email && errors.email) ? "border border-red-400 border-solid p-5" : "border border-gray-400 border-solid p-5"} type="email" autoComplete="on" placeholder="ایمیل خود را وارد کنید" name="email" />
+                    <Field id="email" className={(touched.email && errors.email) ? "border border-red-400 border-solid p-5" : "border border-gray-400 border-solid p-5"} type="text" autoComplete="on" placeholder="ایمیل یا یوزر خود را وارد کنید" name="email" />
                     <ErrorMessage name='email' component='h3' />
                     <Field id="password" className={(touched.password && errors.password) ? "border border-red-400 border-solid p-5" : "border border-gray-400 border-solid p-5"} autoComplete="on" placeholder="پسورد خود را وارد کنید" type="password" name="password" />
                     {errors.password && touched.password && errors.password}
