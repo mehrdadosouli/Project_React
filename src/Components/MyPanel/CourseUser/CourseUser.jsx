@@ -15,7 +15,7 @@ function CourseUser() {
     },[])
   return (
     <div>
-        <h3 className='bg-[#28293D] rounded-3xl p-10 mb-10'>دوره های شما</h3>
+        <h3 className='bg-[#28293D] rounded-3xl p-10 mb-10 md:text-right text-center'>دوره های شما</h3>
         <CourseUserBox data={course} />
     </div>
   )

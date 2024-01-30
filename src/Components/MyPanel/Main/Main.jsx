@@ -23,18 +23,18 @@ function Main() {
     fetchInfoUser()
   },[])
   return (
-    <div className="w-[75%] p-20 px-16 bg-[#1C1C28] rounded-3xl">
+    <div className="sm:w-[75%] w-[100%] p-20 px-16 bg-[#1C1C28] rounded-3xl">
       <div>
         <span className="text-3xl font-bold">
           {infoUser.name} عزیز خوش آمدی
         </span>        
            <PanelInfoBox data={info} name="مجموعه" />
       </div>
-      <div className="flex gap-10">
-        <div className="w-1/2">
+      <div className="flex xl:flex-row flex-col gap-10">
+        <div className="xl:w-1/2 w-full">
           <CourseUser />
         </div>
-        <div className="w-1/2 bg-[#28293D] rounded-3xl p-10">
+        <div className="xl:w-1/2 w-full bg-[#28293D] rounded-3xl p-10">
           <LastTickets />
         </div>
       </div>
