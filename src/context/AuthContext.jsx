@@ -32,7 +32,7 @@ export default function AuthContext({children}) {
                  Authorization:`Bearer ${getToken('user')}`
              }
          })
-         .then(res=>{ 
+         .then(res=>
             setInfos({
                  Islogin:true,
                  username:res.data.username,
@@ -40,8 +40,7 @@ export default function AuthContext({children}) {
                  email:res.data.email,
                  role:res.data.role,
                  token:getToken('user')
-            })
-        })    
+            }))    
     }
     useEffect(()=>{
         getMeInfos()

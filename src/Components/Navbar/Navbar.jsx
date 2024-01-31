@@ -19,11 +19,10 @@ export default function Navbar() {
         setData(res)
         setUser(info.infos)
     }
-   
+    
     useEffect(()=>{  
-        fetch()
-
-    },[user])
+        fetch()         
+    },[info])
     return (
     <>
         <div className='flex justify-between items-center p-5 md:text-3xl sm:text-2xl text-lg'>
@@ -43,7 +42,7 @@ export default function Navbar() {
             </div>
             <div className="left ">
                 {
-                    !user.Islogin ? (<span className='border-green-400 border-solid border p-5 rounded-lg'><Link to="/login" >Login</Link></span>) : (<Link to='/mypanel' className='border-green-400 border-solid border p-5 rounded-lg'>{user.name}</Link>)
+                    !user.Islogin ? <span className='border-green-400 border-solid border p-5 rounded-lg'><Link to="/login" >Login</Link></span> : (<Link to='/mypanel' className='border-green-400 border-solid border p-5 rounded-lg'>{user.name}</Link>)
                 }
                 {
                     user.Islogin && <Link onClick={logOutHandler} to='/login' className='border-green-400 border-solid border p-5 rounded-lg ml-3'>LogOut</Link>
