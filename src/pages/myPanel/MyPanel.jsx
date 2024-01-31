@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React, { useEffect } from 'react'
 
 import SideMenu from '../../Components/MyPanel/SideMenu/SideMenu'

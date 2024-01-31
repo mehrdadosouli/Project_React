@@ -16,7 +16,7 @@ export default function MainPage() {
   return (
     <>
        <Topbar />
-       <Navbar />
+       <Navbar text="black" />
        <Landing />
        <SectionTitle title="جدیدترین دوره ها" descrip="سکوی پرتاپ شما به سمت موفقیت" btn="تمامی دوره ها"/>
        <LastedCourse />

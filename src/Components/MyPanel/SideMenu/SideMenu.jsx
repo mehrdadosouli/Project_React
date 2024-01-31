@@ -15,7 +15,7 @@ function SideMenu() {
           <div className={`py-16 flex flex-col gap-10 sm:visible translate-x-[1rem] sm:bg-inherit bg-slate-500 text-center sm:transform-none transform transition-all ease-linear ${showMenu ? 'visible translate-x-[1rem]' : 'invisible translate-x-[10rem]'}`}>
             <div className='flex lg:flex-row flex-col-reverse gap-10 justify-center'>
               <img className='xl:w-32 w-24 mx-auto select-none' src="https://sabzlearn.ir/wp-content/themes/sabzlearn-theme/images/logo.webp" alt="weblearn" />
-              <h1 className='xl:text-7xl text-5xl select-none'>وب لرن</h1>
+              <h1 className='xl:text-7xl text-5xl select-none '><Link to='/'  className='text-white'>وب لرن</Link></h1>
             </div>
             <div className='[&>*]:text-white flex flex-col gap-10 lg:px-[18%]'>
              <Link to='/mypanel' >پیشخوان</Link>

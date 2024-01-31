@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { AuthInfosContext } from '../../context/AuthContext';
 import { clearLocalStorage } from '../../utils/funcs';
 
-export default function Navbar() {
+export default function Navbar({text}) {
 
     const info=useContext(AuthInfosContext)
     const [user,setUser]=useState({})
@@ -30,10 +30,10 @@ export default function Navbar() {
                 {
                     data.map(item=>{
                         return(
-                            <Link key={item._id} className='relative list_menu px-3 py-4 text-lg sm:text-xl lg:text-3xl' to={item.href}>{item.title} {item.submenus.length !==0 && (<><i className='absolute top-5 mx-1'><IoIosArrowDown /></i>
+                            <Link key={item._id} className={`relative list_menu px-3 py-4 text-lg sm:text-xl lg:text-3xl text-${text}`} to={item.href}>{item.title} {item.submenus.length !==0 && (<><i className='absolute top-5 mx-1'><IoIosArrowDown /></i>
                             <ul className='list-none bg-slate-400 md:w-[25rem] w-[16rem] p-5 flex flex-col gap-5 top-[4.5rem] rounded-lg absolute z-10 ul_menu invisible'>
                                    {item.submenus.map((submenu)=>(<li className='item_menu' key={submenu._id}>
-                                    <Link className='text-white' to={submenu.href}>{submenu.title}</Link></li>))}
+                                    <Link className={`text-${text}`} to={submenu.href}>{submenu.title}</Link></li>))}
                                 </ul></>) }
                             </Link> 
                         )
@@ -42,10 +42,10 @@ export default function Navbar() {
             </div>
             <div className="left ">
                 {
-                    !user.Islogin ? <span className='border-green-400 border-solid border p-5 rounded-lg'><Link to="/login" >Login</Link></span> : (<Link to='/mypanel' className='border-green-400 border-solid border p-5 rounded-lg'>{user.name}</Link>)
+                    !user.Islogin ? <span className={`border-green-400 border-solid border p-5 rounded-lg text-${text}`}><Link to="/login" >Login</Link></span> : (<Link to='/mypanel' className={`border-green-400 border-solid border p-5 rounded-lg text-${text}`}>{user.name}</Link>)
                 }
                 {
-                    user.Islogin && <Link onClick={logOutHandler} to='/login' className='border-green-400 border-solid border p-5 rounded-lg ml-3'>LogOut</Link>
+                    user.Islogin && <Link onClick={logOutHandler} to='/login' className={`border-green-400 border-solid border p-5 rounded-lg ml-3 text-${text}`}>LogOut</Link>
                 }
             </div>
         </div>
