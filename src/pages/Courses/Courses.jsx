@@ -4,6 +4,7 @@ import { getToken } from "../../utils/funcs";
 import axios from "axios";
 import StatusBox from "../../Components/StatusBox/StatusBox";
 import Navbar from "../../Components/Navbar/Navbar";
+import Sessions from "../../Components/Sessions/Sessions";
 
 
 function Courses() {
@@ -29,7 +30,7 @@ function Courses() {
     return (
         <div className="bg-[#1C1C28] text">
           <div className="container py-10">
-          <Navbar text="white" />
+            <Navbar text="white" />
             <div className="flex items-center gap-10 my-10">
                 <div className="w-1/2 flex flex-col gap-10 text-white">
                     <h1 className="text-5xl font-extrabold">{dataa.name}</h1>
@@ -63,8 +64,10 @@ function Courses() {
                 </div>
               </div>
             </div>
-
             {/* session of course */}
+            <div className="flex flex-wrap w-2/3 gap-10">
+              <Sessions />
+            </div>
           </div>
         </div>
     );
