@@ -5,6 +5,7 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import AuthContext from './context/AuthContext'
 import MyPanel from './pages/myPanel/MyPanel'
+import MyCourse from './Components/MyPanel/MyCourse/MyCourse'
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/login' element={<Login />} /> 
         <Route path='/register' element={<Register />} /> 
         <Route path='/mypanel' element={<MyPanel />} /> 
+        <Route path='/mycourses' element={<MyCourse />} /> 
       </Routes>      
       </AuthContext>
     </>
