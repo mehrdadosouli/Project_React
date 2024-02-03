@@ -5,6 +5,9 @@
 @layer base {
 }
 @layer utilities {
+  .accordion{
+    overflow: visible;
+  }
   .afterSpan {
     position: absolute;
     content: "";

@@ -18,7 +18,6 @@ function Courses() {
             headers: {Authorization: `Bearer ${getToken("user")}`}
         });
         setData(result.data);
-        console.log(dataa);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -48,9 +47,9 @@ function Courses() {
                     <StatusBox status='اخرین بروزرسانی' value={dataa.updatedAt.slice(0,10)} />
                 </div> 
                 <div className="flex w-full gap-10">
-                    <StatusBox status='وضعیت دوره' value={dataa.categoryID.isComplete ? "دوره به اتمام رسیده" : "دوره در حال برگذاری است"} />
-                    <StatusBox status='قیمت دوره' value={dataa.price ? dataa.price : "رایگان"} />
-                    <StatusBox status='اخرین بروزرسانی' value={dataa.updatedAt.slice(0,10)} />
+                    <StatusBox status='روش پشتیبانی' value={dataa.support ? dataa.support : "-"} />
+                    <StatusBox status='نام دوره' value={dataa.shortName ? dataa.shortName : "-"} />
+                    <StatusBox status='دسته بندی' value={dataa.categoryID.name} />
                 </div> 
               </div>
               <div className="w-1/2 p-10 bg-[#28293D] gap-10 rounded-3xl flex flex-col justify-center items-center">
@@ -65,8 +64,13 @@ function Courses() {
               </div>
             </div>
             {/* session of course */}
-            <div className="flex flex-wrap w-2/3 gap-10">
-              <Sessions />
+            <div className="flex gap-10">
+              <div className="flex flex-wrap w-2/3 gap-10">
+                <Sessions data={dataa} />
+              </div>
+              <div className="w-1/2 p-10 bg-[#28293D] gap-10 rounded-3xl flex flex-col justify-center items-center">
+                  
+              </div>
             </div>
           </div>
         </div>
