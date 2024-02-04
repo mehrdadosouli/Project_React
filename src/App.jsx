@@ -7,8 +7,7 @@ import AuthContext from './context/AuthContext'
 import MyPanel from './pages/myPanel/MyPanel'
 import MyCourse from './Components/MyPanel/MyCourse/MyCourse'
 import Courses from './pages/Courses/Courses'
-
-
+import Episode from './pages/Episode/Episode'
 
 
 function App() {
@@ -22,10 +21,10 @@ function App() {
         <Route path='/mypanel' element={<MyPanel />} /> 
         <Route path='/mycourses' element={<MyCourse />} /> 
         <Route path='/courses' element={<Courses />} /> 
+        <Route path='/episode' element={<Episode />} />
       </Routes>      
       </AuthContext>
     </>
   )
 }
-
 export default App

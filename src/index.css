@@ -5,6 +5,10 @@
 @layer base {
 }
 @layer utilities {
+  .active{
+    background-color: red;
+    
+  }
   .accordion{
     overflow: visible;
   }

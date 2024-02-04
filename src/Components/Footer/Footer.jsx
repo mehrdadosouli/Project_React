@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer>
-    <div className='flex justify-between container bg-gray-300 p-10 [&>*]:w-1/3 [&>*]:px-5 rounded-2xl [&>*]:relative [&>*]:before:befores_footer'>
+    <div className='flex md:flex-row md:gap-0 gap-10 flex-col justify-between container bg-gray-300 p-10 md:[&>*]:w-1/3 [&>*]:w-full [&>*]:px-5 rounded-2xl [&>*]:relative [&>*]:before:befores_footer'>
         <div className='z-10'>
             <h4 className='font-bold'>درباره ما</h4>
             <p className='text-gray-600 pt-5'>وقتی تازه شروع به یادگیری برنامه نویسی کردم. یکی از مشکلاتی که در فرآیند یادگیری داشتم، کمبود آموزش های خوب با پشتیبانی قابل قبول بود که باعث شد اون موقع تصمیم بگیرم اگر روزی توانایی مالی و فنی قابل قبولی داشتم یک وب سایت برای حل این مشکل راه اندازی کنم! و خب امروز آکادمی آموزش برنامه نویسی سبزلرن به عنوان یک آکادمی خصوصی فعالیت میکنه و این به این معنی هست که هر مدرسی اجازه تدریس در اون رو نداره و باید از فیلترینگ های خاص آکادمی سبزلرن رد شه! این به این معنی هست که ما برامون فن بیان و نحوه تعامل مدرس با دانشجو بسیار مهمه! ما در آکادمی سبزلرن تضمین پشتیبانی خوب و با کیفیت رو به شما میدیم . چرا که مدرسین وب سایت سبزلرن حتی برای پشتیبانی دوره های رایگان شون هم هزینه دریافت میکنند و متعهد هستند که هوای کاربر های عزیز رو داشته باشند !</p>
@@ -64,7 +64,7 @@ export default function Footer() {
             }}>
                 {({handleSubmit,errors,touched,isSubmitting})=>(
                 <Form>
-                    <Field name='email' type="email" className="p-1" />
+                    <Field name='email' type="email" className="p-1 sm:w-52 w-36" />
                      <button className='p-1 bg-green-400 text-white' type='submit'>submit</button>
                     {/* <div>{errors.email && touched.email && errors.email}</div> */}
                     <ErrorMessage name='email' component='h1' />
@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
     </div>
     </div>
-    <div className='bg-green-500 flex w-[500px] h-8 rounded-b-3xl mx-auto'></div>
+    <div className='bg-green-500 flex w-3/4 h-8 rounded-b-3xl mx-auto'></div>
     <div className='bg-gray-300 mt-10 text-center p-8 font-semibold'>کلیه حقوق برای آکادمی آموزش برنامه نویسی وب لرن محفوظ است.</div>
     </footer>
     

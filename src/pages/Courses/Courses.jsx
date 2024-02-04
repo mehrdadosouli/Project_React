@@ -8,7 +8,7 @@ import Sessions from "../../Components/Sessions/Sessions";
 
 
 function Courses() {
-  const location = useLocation();
+const location = useLocation();
   const myParam = new URLSearchParams(location.search).get("name");
   const [dataa, setData] = useState([]);
   useEffect(() => {
@@ -66,7 +66,7 @@ function Courses() {
             {/* session of course */}
             <div className="flex gap-10">
               <div className="flex flex-wrap w-2/3 gap-10">
-                <Sessions data={dataa} />
+                {dataa && <Sessions data={dataa} />}
               </div>
               <div className="w-1/2 p-10 bg-[#28293D] gap-10 rounded-3xl flex flex-col justify-center items-center">
                   

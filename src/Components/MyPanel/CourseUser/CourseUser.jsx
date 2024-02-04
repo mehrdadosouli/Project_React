@@ -10,8 +10,7 @@ function CourseUser() {
                 Authorization:`Bearer ${getToken('user')}`
             }
         })
-        .then(res=>SetCourse(res.data));
-        
+        .then(res=>SetCourse(res.data));   
     },[])
   return (
     <div>
