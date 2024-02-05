@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { navbarMenuRandom } from '../../utils/funcs'
+import { Link } from 'react-router-dom'
 
 
 export default function Topbar() {
@@ -14,9 +15,9 @@ export default function Topbar() {
     <>
         <div className='flex justify-between items-center p-5 bg-gray-400 md:text-2xl text-sm sm:text-2xl overflow-hidden'>
             <div className="right">
-                <ul className='ul flex sm:gap-5 gap-2 mx-2 text-base sm:text-lg md:text-xl'>kjh
+                <ul className='ul flex sm:gap-5 gap-2 mx-2 text-base sm:text-lg md:text-xl'>
                     {
-                       menu              
+                       <Link to="/">{menu}</Link>              
                     }
                 </ul>
             </div>

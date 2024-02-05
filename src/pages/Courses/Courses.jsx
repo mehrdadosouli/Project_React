@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { getToken } from "../../utils/funcs";
 import axios from "axios";
 import StatusBox from "../../Components/StatusBox/StatusBox";
@@ -9,6 +9,7 @@ import Sessions from "../../Components/Sessions/Sessions";
 
 function Courses() {
 const location = useLocation();
+const navigate=useNavigate()
   const myParam = new URLSearchParams(location.search).get("name");
   const [dataa, setData] = useState([]);
   useEffect(() => {
@@ -17,14 +18,15 @@ const location = useLocation();
         const result = await axios.post(`http://localhost:4000/v1/courses/${myParam}`,null,{
             headers: {Authorization: `Bearer ${getToken("user")}`}
         });
-        setData(result.data);
+          setData(result.data)        
       } catch (error) {
+        navigate('/')
         console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
-  },[]);
+  },[myParam]);
     if(dataa && dataa.categoryID){
     return (
         <div className="bg-[#1C1C28] text">
@@ -75,6 +77,10 @@ const location = useLocation();
           </div>
         </div>
     );
+   }else{
+    return(
+      <div><h2>دوره ای نداریم با این مشخصات</h2></div>
+    )
    }
 }
 

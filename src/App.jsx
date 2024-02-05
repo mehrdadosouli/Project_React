@@ -8,6 +8,7 @@ import MyPanel from './pages/myPanel/MyPanel'
 import MyCourse from './Components/MyPanel/MyCourse/MyCourse'
 import Courses from './pages/Courses/Courses'
 import Episode from './pages/Episode/Episode'
+import AllCategory from './pages/AllCoursesCategory/AllCoursesCategory'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/mycourses' element={<MyCourse />} /> 
         <Route path='/courses' element={<Courses />} /> 
         <Route path='/episode' element={<Episode />} />
+        <Route path='/category-info/:allcourses' element={<AllCategory />} />
       </Routes>      
       </AuthContext>
     </>
