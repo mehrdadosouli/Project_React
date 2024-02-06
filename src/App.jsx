@@ -10,6 +10,7 @@ import Courses from './pages/Courses/Courses'
 import Episode from './pages/Episode/Episode'
 import AllCategory from './pages/AllCoursesCategory/AllCoursesCategory'
 import AllCourses from './pages/AllCourses/AllCourses'
+import AllArticles from './pages/AllArticles/AllArticles'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/episode' element={<Episode />} />
         <Route path='/category-info/:allcourses' element={<AllCategory />} />
         <Route path='/allcourses' element={<AllCourses />} />
+        <Route path='/allarticles' element={<AllArticles />} />
       </Routes>      
       </AuthContext>
     </>

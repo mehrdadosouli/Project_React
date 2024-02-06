@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-export default function SectionTitle({title,descrip,btn}) {
+export default function SectionTitle({title,descrip,btn,href}) {
   return (
     <div className='flex justify-between container items-center relative py-10'>
         <div className='flex flex-col before:befores '>
@@ -8,7 +8,7 @@ export default function SectionTitle({title,descrip,btn}) {
             <span>{descrip}</span>
         </div>
         {
-            btn && <div className='bg-green-500 rounded-lg p-3 text-white'><Link to="/allcourses">{btn}</Link></div>
+            btn && <div className='bg-green-500 rounded-lg p-3 text-white'><Link to={`/${href}`}>{btn}</Link></div>
         }
     </div>
   )

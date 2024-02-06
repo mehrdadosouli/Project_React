@@ -18,15 +18,15 @@ export default function MainPage() {
        <Topbar />
        <Navbar text="black" />
        <Landing />
-       <SectionTitle title="جدیدترین دوره ها" descrip="سکوی پرتاپ شما به سمت موفقیت" btn="تمامی دوره ها"/>
+       <SectionTitle href="allcourses" title="جدیدترین دوره ها" descrip="سکوی پرتاپ شما به سمت موفقیت" btn="تمامی دوره ها"/>
        <LastedCourse />
-       <SectionTitle title="ما چه کمکی بهتون میکنیم؟" descrip="از اونجایی که آکادمی آموزشی وب لرن یک آکادمی خصوصی هست" />
+       <SectionTitle href="" title="ما چه کمکی بهتون میکنیم؟" descrip="از اونجایی که آکادمی آموزشی وب لرن یک آکادمی خصوصی هست" />
        <Help />
-       <SectionTitle title="محبوب ترین دوره ها"  />
+       <SectionTitle href="" title="محبوب ترین دوره ها"  />
        <PopularCourse />
-       <SectionTitle title="دوره های در حال پیش فروش" />
+       <SectionTitle href="" title="دوره های در حال پیش فروش" />
        <PreSellCourse />
-       <SectionTitle title="جدیدترین مقاله ها" descrip="پیش به سوی ارتقای دانش" btn="تمامی مقاله ها"/>
+       <SectionTitle href="allarticles" title="جدیدترین مقاله ها" descrip="پیش به سوی ارتقای دانش" btn="تمامی مقاله ها"/>
        <LastArticles />
        <Footer />
     </>
