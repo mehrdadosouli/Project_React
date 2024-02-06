@@ -26,7 +26,7 @@ return (
                             </div>
                         </div>
                         <div className='border border-t-1 border-l-0 border-r-0 border-b-0 border-solid border-gray-300 flex justify-center items-center p-5'>
-                            <Link to={`/courses/sessions/${props.shortName}`}>مشاهده جزیات</Link>
+                            <Link to={`/courses?name=${props.shortName}`}>مشاهده جزیات</Link>
                         </div>
                 </div>
   )
