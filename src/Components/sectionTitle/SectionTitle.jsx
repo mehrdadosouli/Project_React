@@ -8,7 +8,7 @@ export default function SectionTitle({title,descrip,btn}) {
             <span>{descrip}</span>
         </div>
         {
-            btn && <div className='bg-green-500 rounded-lg p-3 text-white'><Link to="/courses">{btn}</Link></div>
+            btn && <div className='bg-green-500 rounded-lg p-3 text-white'><Link to="/allcourses">{btn}</Link></div>
         }
     </div>
   )
