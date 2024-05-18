@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { menuSlice } from '../../features/dataSlice'
 import { navbarMenuRandom } from '../../utils/funcs'
 
@@ -12,7 +12,7 @@ export default function Topbar() {
                 <ul className='ul flex sm:gap-5 gap-2 mx-2 text-base sm:text-lg md:text-xl'>
                     {
                        menu && menu.map(elem=>elem.submenu && navbarMenuRandom(elem.submenu,3).map(item=>(<li>
-                        <Link>{item.page}</Link>
+                        <Link to={item.link}>{item.page}</Link>
                        </li>)))           
                     }
                 </ul>

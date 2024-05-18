@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState={
     menu:[
-        {id:1,page:'صفحه اصلی',link:'/',icon:'',submenu:[]},
-        {id:2,page:'فروشگاه',link:'/shopping',icon:'',submenu:[]},
+        {id:1,page:'صفحه اصلی',link:'/',icon:''},
+        {id:2,page:'فروشگاه',link:'/shopping',icon:''},
         {id:3,page:'فرانت اند',link:'/frontend',icon:'',submenu:[
             {id:1,page:'Html',icon:'',link:'/frontend/html'},
             {id:2,page:'Html',icon:'',link:'/frontend/html'},

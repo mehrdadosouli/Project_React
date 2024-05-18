@@ -5,8 +5,13 @@ const navbarMenuRandom=(data,num)=>{
 }
 
 const getToken=(user)=>{
-    const userInfo=JSON.parse(localStorage.getItem(user))
-    return userInfo ? userInfo.token : null 
+    let local=localStorage.getItem(user)
+    if(local){
+        const userInfo=JSON.parse(local)
+        return userInfo ? userInfo.token : null 
+    }else{
+        return false
+    }
 }
 
 const setToLocalStorage=(key,value)=>{
