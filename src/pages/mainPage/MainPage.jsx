@@ -9,10 +9,11 @@ import PopularCourse from '../../Components/PopularCourse/PopularCourse'
 import PreSellCourse from '../../Components/PreSellCourse/PreSellCourse'
 import LastArticles from '../../Components/LastArticles/LastArticles'
 import Footer from '../../Components/Footer/Footer'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function MainPage() {
-    
+  AOS.init();
   return (
     <>
        <Topbar />
