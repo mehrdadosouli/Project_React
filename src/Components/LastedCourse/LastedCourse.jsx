@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useSelector } from 'react-redux';
 import CourseBox from '../CourseBox/CourseBox';
-import uuid from 'react-uuid';
+import { allCourse } from '../../features/dataSlice';
+
 
 export default function LastedCourse() {
- 
-    const [course,setCourse]=useState([])
-    useEffect(()=>{
-        axios.get('http://localhost:4000/v1/courses')
-        .then(courses=>setCourse(courses.data))
-    },[])
+ const course=useSelector(allCourse)
+    console.log(course);
   return (
     <div className='flex flex-wrap container gap-5'>
         {
-            course.slice(0,6).map(item=>
-                <CourseBox {...item} key={uuid()}/>
+            course.slice(0,6).map(item=><div key={item._id}>
+                <CourseBox item={item}/>
+            </div>
             )
         }
     </div>

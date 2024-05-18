@@ -11,7 +11,7 @@ export default function Topbar() {
             <div className="right">
                 <ul className='ul flex sm:gap-5 gap-2 mx-2 text-base sm:text-lg md:text-xl'>
                     {
-                       menu && menu.map(elem=>elem.submenu && navbarMenuRandom(elem.submenu,3).map(item=>(<li>
+                       menu && menu.map(elem=>elem.submenu && navbarMenuRandom(elem.submenu,3).map(item=>(<li key={item.id}>
                         <Link to={item.link}>{item.page}</Link>
                        </li>)))           
                     }
