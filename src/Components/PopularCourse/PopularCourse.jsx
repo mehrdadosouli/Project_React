@@ -1,17 +1,13 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
 import CourseBox from '../CourseBox/CourseBox'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import "swiper/css";
 import 'swiper/css/autoplay';
+import { useSelector } from 'react-redux';
+import { popularCourse } from '../../features/dataSlice';
 
 export default function PopularCourse() {
-    const [course,setCourse]=useState([])
-    useEffect(()=>{
-        axios.get('http://localhost:4000/v1/courses/popular')
-        .then(result=>setCourse(result.data))
-    },[])
-
+    const course=useSelector(popularCourse)
+    console.log(course);
   return (
     <div className='container gap-5'>
             <Swiper
@@ -33,9 +29,9 @@ export default function PopularCourse() {
                 }}
               >
         {
-            course.map(item=>
+            course?.map(item=>
                 <SwiperSlide key={item._id}>
-                    <CourseBox {...item} isSlider={true} />
+                    <CourseBox item={item} isSlider={true} />
                 </SwiperSlide>   
             )
         }
