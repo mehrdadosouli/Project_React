@@ -1,16 +1,3 @@
-// import {createContext} from 'react'
-// import { getMe } from '../utils/funcs';
-// const AuthContext = createContext({
-//     Islogin:false,
-//     username:'',
-//     name:'',
-//     email:'',
-//     password:'',
-//     role:'',
-//     token:null
-// })
-// import React from 'react'
-
 import React,{ createContext, useEffect, useState } from 'react'
 import { getToken } from '../utils/funcs';
 import axios from 'axios';
