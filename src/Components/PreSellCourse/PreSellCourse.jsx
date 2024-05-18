@@ -1,14 +1,10 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CourseBox from '../CourseBox/CourseBox';
+import { useSelector } from 'react-redux';
+import { presellCourse } from '../../features/dataSlice';
 
 export default function PreSellCourse() {
-    const [data,setData]=useState([])
-    useEffect(()=>{
-        axios.get('http://localhost:4000/v1/courses/presell')
-        .then(res=>setData(res.data))
-    },[])
+    const data=useSelector(presellCourse)
     return (
     <div className='container'>
     <Swiper
@@ -25,7 +21,7 @@ export default function PreSellCourse() {
     >
         {data.map(item=>
                 <SwiperSlide key={item._id}>
-                    <CourseBox {...item} isSlider={true} />
+                    <CourseBox item={item} isSlider={true} />
                 </SwiperSlide>   
             )}
     </Swiper>
