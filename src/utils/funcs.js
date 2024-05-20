@@ -8,7 +8,7 @@ const getToken=(user)=>{
     let local=localStorage.getItem(user)
     if(local){
         const userInfo=JSON.parse(local)
-        return userInfo ? userInfo.token : null 
+        return userInfo ? userInfo : null 
     }else{
         return false
     }

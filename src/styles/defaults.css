@@ -26,6 +26,9 @@ html {
   i {
     user-select: none;
   }
+  input,button{
+    border: 1px solid gray;
+  }
   
   /* Finish Default Styles */
   

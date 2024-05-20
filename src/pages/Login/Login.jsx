@@ -27,37 +27,12 @@ export default function Login() {
                 return errors
             }}  
             onSubmit={(values)=>{
-                const data={
-                    identifier:values.email,
-                    password:values.password
-                }
-                axios.post('http://localhost:4000/v1/auth/login',data)
-                .then(res=>{if(res.status==200){
-                    setToLocalStorage('user',{token:res.data.accessToken})
-                    Swal.fire({
-                        title: "با موفقیت لاگین شدید",
-                        icon: "success",
-                        button:'ok'
-                    })
-                    .then(()=>{
-                        navigate("/");
-                    })
-                }}).catch(()=>{
-                    Swal.fire({
-                        title: "همچین یوزری نداریم",
-                        icon: "error",
-                        button:'ok'
-                    }).then(()=>{
-                        let passwords=document.querySelector('#password')
-                        let emails=document.querySelector('#email')
-                        passwords.value=""
-                        emails.value=""
-                    })
-                })
+                console.log(values);
+                
             }}>
             {({touched,errors})=>(
                 <Form className='flex flex-col gap-10 w-full'>
-                    <h1 className='font-extrabold text-5xl'>Login</h1>
+                    <h1 className='font-extrabold text-5xl'>فرم ورود</h1>
                     <Field id="email" className={(touched.email && errors.email) ? "border border-red-400 border-solid p-5" : "border border-gray-400 border-solid p-5"} type="text" autoComplete="on" placeholder="ایمیل یا یوزر خود را وارد کنید" name="email" />
                     <ErrorMessage name='email' component='h3' />
                     <Field id="password" className={(touched.password && errors.password) ? "border border-red-400 border-solid p-5" : "border border-gray-400 border-solid p-5"} autoComplete="on" placeholder="پسورد خود را وارد کنید" type="password" name="password" />

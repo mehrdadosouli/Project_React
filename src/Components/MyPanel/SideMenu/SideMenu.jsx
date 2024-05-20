@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { clearLocalStorage } from '../../../utils/funcs'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 function SideMenu() {
   const [showMenu,setShowMenu]=useState(false)
-  const logOutHandler=()=>{
-    clearLocalStorage()
-  }
+
 
   return (
       <div className='sm:relative absolute sm:w-[25%] w-[35%] p-5 flex flex-col z-40'>
@@ -20,7 +17,7 @@ function SideMenu() {
             <div className='[&>*]:text-white flex flex-col gap-10 lg:px-[18%]'>
              <Link to='/mypanel' >پیشخوان</Link>
              <Link to='/mycourses' >دوره های من</Link>
-             <Link to='/login' onClick={logOutHandler}>خروج</Link>
+             <Link to='/' >خروج</Link>
             </div>
           </div>
       </div>

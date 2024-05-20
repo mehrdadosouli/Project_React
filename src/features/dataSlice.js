@@ -1146,19 +1146,25 @@ const initialState={
             "registers": 2,
             "courseAverageScore": 5
         }
-    ]
+    ],
+    userRegister:[]
 }
 
 export const dataSlice=createSlice({
     name:'AllData',
     initialState,
     reducers:{
-
+        registerUser:(state,action)=>{
+            console.log(action);
+            state.userRegister.push(action.payload)
+        }
     }
 })
 
 export default dataSlice.reducer
+export const { registerUser } = dataSlice.actions
 export const menuSlice=(state)=>state.dataSlice.menu
 export const allCourse=(state)=>state.dataSlice.allCourse
 export const popularCourse=(state)=>state.dataSlice.popular
 export const presellCourse=(state)=>state.dataSlice.presell
+export const registerUserData=(state)=>state.dataSlice.userRegister

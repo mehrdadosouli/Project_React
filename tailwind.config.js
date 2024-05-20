@@ -7,8 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        'bg_landing':"url('assets/image/img.jpg')",
-        'bg_landing_mobile':"url('assets/image/1.gif')"
+        'bg_landing':"url('assets/image/main.jpg')",
       },
       backgroundColor:{
         'bg-panel':'#28293D'

@@ -30,7 +30,7 @@ export default function PopularCourse() {
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 680,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -68,7 +68,7 @@ export default function PopularCourse() {
     <Slider {...settings}>
         {
             course?.map(item=>
-                    <CourseBox item={item} isSlider={true} />
+                    <CourseBox item={item} key={item._id} isSlider={true} />
         )}
         </Slider>
     </div>
