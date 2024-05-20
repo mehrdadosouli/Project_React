@@ -1,42 +1,76 @@
 import CourseBox from '../CourseBox/CourseBox'
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import "swiper/css";
-import 'swiper/css/autoplay';
+import Slider from "react-slick";
 import { useSelector } from 'react-redux';
 import { popularCourse } from '../../features/dataSlice';
 
 export default function PopularCourse() {
     const course=useSelector(popularCourse)
-    console.log(course);
+    const settings = {
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 1280,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ],
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
+  };
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red", borderRadius:'50%' }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red", borderRadius:'50%' }}
+        onClick={onClick}
+      />
+    );
+  }
+
+    
   return (
-    <div className='container gap-5'>
-            <Swiper
-                slidesPerView={3}
-                breakpoints= {{
-                    100: { slidesPerView: 1},
-                    768: { slidesPerView: 2},
-                    1023: {slidesPerView: 3}
-                  }}
-                spaceBetween={30}
-                zoom='true'
-                pagination={{ clickable: true }}
-                loop={true}
-                className="w-full"
-                scrollbar={{ draggable: true }}
-                autoplay= {{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
-              >
+    <div className="container">
+    <Slider {...settings}>
         {
             course?.map(item=>
-                <SwiperSlide key={item._id}>
                     <CourseBox item={item} isSlider={true} />
-                </SwiperSlide>   
-            )
-        }
-
-        </Swiper>
+        )}
+        </Slider>
     </div>
   )
 }
