@@ -18,7 +18,7 @@ function Courses() {
         useEffect(()=>{
           const params=searchParam.get('name')
           const filteringCourseUrl=async()=>{
-            const filterCategory=await select.filter(item=>item.shortName === params) 
+            const filterCategory=await select.filter(item=>item.shortName === params)  
             await setCourse(filterCategory)   
           }
           filteringCourseUrl()
