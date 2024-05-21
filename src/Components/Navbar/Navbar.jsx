@@ -7,11 +7,12 @@ import { menuSlice } from '../../features/dataSlice';
 
 export default function Navbar({text}) {
     const menu=useSelector(menuSlice)
+
     const logOutHandler=()=>{
         clearLocalStorage()
     }
     let user=getToken('user')
-  
+
     return (
     <>
         <div className='flex justify-between items-center p-5 md:text-3xl sm:text-2xl text-lg'>

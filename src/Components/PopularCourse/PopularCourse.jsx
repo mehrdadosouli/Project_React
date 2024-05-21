@@ -68,7 +68,7 @@ export default function PopularCourse() {
     <Slider {...settings}>
         {
             course?.map(item=>
-                    <CourseBox item={item} key={item._id} isSlider={true} />
+              <CourseBox item={item} key={item._id} isSlider={true} />
         )}
         </Slider>
     </div>

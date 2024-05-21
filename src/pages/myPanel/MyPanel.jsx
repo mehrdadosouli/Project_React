@@ -11,7 +11,7 @@ function MyPanel() {
     
   },[])
   return (
-    <div className='bg-bg-panel w-full py-16 sm:px-32 text-white'>
+    <div className='bg-bg-panel w-full min-h-screen py-16 sm:px-32 text-white'>
         <div className='flex'>
           <SideMenu />
           <Main />
