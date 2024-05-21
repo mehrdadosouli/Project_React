@@ -8,8 +8,6 @@ import Sessions from "../../Components/Sessions/Sessions";
 import { allCourse } from "../../features/dataSlice";
 import { useSelector } from "react-redux";
 
-import vid from '../../assets/video/js-20-lib.mp4'
-
 function Courses() {
   const [searchParam,setSearchParam] = useSearchParams();
   const navigate=useNavigate()
@@ -38,7 +36,7 @@ function Courses() {
                     <p className="leading-loose">اولین قدم شروع طراحی وبسایت، آموزش HTML هست. HTML یه زبان نشانه گذاری هست که با کمک اون میتونی تگ هایی بنویسی تا سایت رو روی اون تگ ها پیاده کنی. همونجوری که هیچ موجودی نمیتونه بدون اسکلت زندگی کنه،</p>
                 </div>
                 <div className="w-1/2">
-                    <video className="w-full rounded-3xl" src={vid} poster={`http://localhost:4000/courses/covers/${course[0].cover}`} controls></video>
+                    <video className="w-full rounded-3xl" src={`src/assets/video/${course[0].shortName}.mp4`} poster={`http://localhost:4000/courses/covers/${course[0].cover}`} controls></video>
                 </div>
             </div>
             <div className="flex gap-10">

@@ -177,10 +177,7 @@ const initialState={
                 "title": "آشنایی اولیه با متد toFixed",
                 "time": "12:09",
                 "video": "1.mp4",
-                "course": {
-                    "_id": "635f05d6fd9e8fcba0d2c909",
-                    "name": "آموزش 20 کتابخانه جاوا اسکریپت"
-                },
+                "course": "635f05d6fd9e8fcba0d2c909",
                 "createdAt": "2022-11-02T11:19:47.677Z",
                 "updatedAt": "2022-11-02T11:19:47.677Z",
                 "__v": 0,
@@ -191,10 +188,7 @@ const initialState={
                 "title": "نحوه پیاده سازی پروژه فلان",
                 "time": "19:21",
                 "video": "2.mp4",
-                "course": {
-                    "_id": "635f05d6fd9e8fcba0d2c909",
-                    "name": "آموزش 20 کتابخانه جاوا اسکریپت"
-                },
+                "course": "635f05d6fd9e8fcba0d2c909",
                 "createdAt": "2022-11-02T11:22:21.731Z",
                 "updatedAt": "2022-11-02T11:22:21.731Z",
                 "__v": 0,
@@ -206,10 +200,7 @@ const initialState={
                 "time": "19:15",
                 "video": "b36e8afba55d2275896e1fbda77ec47f7981e20c230f3470f8678b2fc6160515.mp4",
                 "free": 0,
-                "course": {
-                    "_id": "635f05d6fd9e8fcba0d2c909",
-                    "name": "آموزش 20 کتابخانه جاوا اسکریپت"
-                },
+                "course": "635f05d6fd9e8fcba0d2c909",
                 "createdAt": "2022-11-02T18:49:19.876Z",
                 "updatedAt": "2022-11-02T18:49:19.876Z",
                 "__v": 0
@@ -220,10 +211,7 @@ const initialState={
                 "time": "12:00",
                 "video": "b36e8afba55d2275896e1fbda77ec47f7981e20c230f3470f8678b2fc6160515.mp4",
                 "free": 0,
-                "course": {
-                    "_id": "635f05d6fd9e8fcba0d2c909",
-                    "name": "آموزش 20 کتابخانه جاوا اسکریپت"
-                },
+                "course": "635f05d6fd9e8fcba0d2c909",
                 "createdAt": "2022-11-04T08:35:03.825Z",
                 "updatedAt": "2022-11-04T08:35:03.825Z",
                 "__v": 0
@@ -234,10 +222,7 @@ const initialState={
                 "time": "10:00",
                 "video": "b36e8afba55d2275896e1fbda77ec47f7981e20c230f3470f8678b2fc6160515.mp4",
                 "free": 1,
-                "course": {
-                    "_id": "635f05d6fd9e8fcba0d2c909",
-                    "name": "آموزش 20 کتابخانه جاوا اسکریپت"
-                },
+                "course": "635f05d6fd9e8fcba0d2c909",
                 "createdAt": "2022-11-04T08:59:54.196Z",
                 "updatedAt": "2022-11-04T08:59:54.196Z",
                 "__v": 0
@@ -248,10 +233,7 @@ const initialState={
                 "time": "20:00",
                 "video": "b36e8afba55d2275896e1fbda77ec47f7981e20c230f3470f8678b2fc6160515.mp4",
                 "free": 1,
-                "course": {
-                    "_id": "635f05d6fd9e8fcba0d2c909",
-                    "name": "آموزش 20 کتابخانه جاوا اسکریپت"
-                },
+                "course": "635f05d6fd9e8fcba0d2c909",
                 "createdAt": "2022-11-04T09:01:34.853Z",
                 "updatedAt": "2022-11-04T09:01:34.853Z",
                 "__v": 0
@@ -262,10 +244,7 @@ const initialState={
                 "time": "11:00",
                 "video": "b36e8afba55d2275896e1fbda77ec47f7981e20c230f3470f8678b2fc6160515.mp4",
                 "free": 0,
-                "course": {
-                    "_id": "635f05d6fd9e8fcba0d2c909",
-                    "name": "آموزش 20 کتابخانه جاوا اسکریپت"
-                },
+                "course": "635f05d6fd9e8fcba0d2c909",
                 "createdAt": "2022-11-04T09:02:21.560Z",
                 "updatedAt": "2022-11-04T09:02:21.560Z",
                 "__v": 0
@@ -276,10 +255,7 @@ const initialState={
                 "time": "18:12",
                 "video": "95f85a31ed5fbb83d43bbe85ee113059e24381ae4d4ed59a2ca6f165005909ba.mp4",
                 "free": 1,
-                "course": {
-                    "_id": "635f05d6fd9e8fcba0d2c909",
-                    "name": "آموزش 20 کتابخانه جاوا اسکریپت"
-                },
+                "course": "635f05d6fd9e8fcba0d2c909",
                 "createdAt": "2022-11-04T12:27:13.468Z",
                 "updatedAt": "2022-11-04T12:27:13.468Z",
                 "__v": 0
