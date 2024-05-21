@@ -66,7 +66,7 @@ function Courses() {
             {/* session of course */}
             <div className="flex gap-10">
               <div className="flex flex-wrap w-full gap-10">
-                {course[0] && <Sessions data={course[0]}/>}
+                {course[0] && <Sessions data={course[0]} />}
               </div>
             </div>
           </div>

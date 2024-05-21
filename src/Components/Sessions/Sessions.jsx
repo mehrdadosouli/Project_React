@@ -4,8 +4,6 @@ import { FaLockOpen,FaLock  } from "react-icons/fa";
 
 function Sessions({data}) {
   const isLogin=getToken('user')
-
-
   return (
     <div className=' bg-[#28293D] text-white p-5 w-full rounded-3xl'>
         <h4 className='text-white'>سر فصل ها</h4>

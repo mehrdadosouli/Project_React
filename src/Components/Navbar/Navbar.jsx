@@ -16,7 +16,7 @@ export default function Navbar({text}) {
     return (
     <>
         <div className='flex justify-between items-center p-5 md:text-3xl sm:text-2xl text-lg'>
-            <div className="right flex sm:gap-8 gap-2">
+            <div className="right flex sm:gap-8 gap-2 z-50">
                 {
                     menu.map(item=>{
                         return(

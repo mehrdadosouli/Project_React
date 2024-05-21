@@ -11,6 +11,7 @@ import Episode from './pages/Episode/Episode'
 import AllCategory from './pages/AllCoursesCategory/AllCoursesCategory'
 import AllCourses from './pages/AllCourses/AllCourses'
 import AllArticles from './pages/AllArticles/AllArticles'
+import Shopping from './pages/Shopping/Shopping'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/login' element={<Login />} /> 
         <Route path='/register' element={<Register />} /> 
         <Route path='/mypanel' element={<MyPanel />} /> 
+        <Route path='/shopping' element={<Shopping />} /> 
         <Route path='/mycourses' element={<MyCourse />} /> 
         <Route path='/courses' element={<Courses />} /> 
         <Route path='/episode' element={<Episode />} />
