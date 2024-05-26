@@ -6,9 +6,10 @@ import { TiStarFullOutline } from "react-icons/ti";
 import uuid from 'react-uuid';
 
 export default function CourseBox({item}) {
+
 return (
         <div className={`mx-3 min-h-[32rem] shadow-lg rounded-2xl md:mb-10 mb-2 hover:transform hover:translate-y-[-10px] hover:transition-transform `}>
-                    <img src={`http://localhost:4000/courses/covers/${item?.cover}`} alt="" className='w-full h-[20rem] object-cover rounded-t-2xl' />
+                    <img src={item.cover} alt="" className='w-full h-[20rem] object-cover rounded-t-2xl' />
                         <span className='p-2 text-xl'>{item?.name}</span>
                         <div className='flex justify-between items-center p-2'>
                             <div className='flex justify-between items-center gap-5'>
