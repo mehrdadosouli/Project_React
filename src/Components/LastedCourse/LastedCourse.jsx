@@ -5,7 +5,6 @@ import { allCourse } from '../../features/dataSlice';
 
 export default function LastedCourse() {
  const course=useSelector(allCourse)
-console.log(course);
   return (
     <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 container gap-5'>
         {

@@ -1243,7 +1243,81 @@ const initialState={
             "courseAverageScore": 5
         }
     ],
-    userRegister:[]
+    userRegister:[],
+    myCourses:[
+        {
+            "_id": "65c0d36eaba3d223ba4e44a3",
+            "name": "آموزش جاوااسکریپت",
+            "description": "توضیحات تستی برای دوره آموزش  جاوااسکریپت",
+            "cover": img1,
+            "support": "گروه تلگرامی",
+            "shortName": "js-expert",
+            "price": 300000,
+            "isComplete": 0,
+            "status": "start",
+            "categoryID": {
+                "_id": "6345cbd132c10de974957632",
+                "title": "برنامه نویسی فرانت اند",
+                "createdAt": "2022-10-11T20:02:25.118Z",
+                "updatedAt": "2022-10-31T12:16:38.299Z",
+                "__v": 0,
+                "name": "frontend"
+            },
+            "creator": {
+                "_id": "634e6b0e1d5142b91afa9bb3",
+                "username": "amin_saeedi",
+                "email": "ce01010101it@gmail.com",
+                "name": "محمدامین سعیدی راد",
+                "role": "ADMIN",
+                "createdAt": "2022-10-18T08:59:58.561Z",
+                "updatedAt": "2022-10-18T08:59:58.561Z",
+                "__v": 0,
+                "profile": "/images/saeedi.png",
+                "phone": "09921558293"
+            },
+            "createdAt": "2022-10-30T23:16:38.317Z",
+            "updatedAt": "2022-10-30T23:16:38.317Z",
+            "__v": 0,
+            "registers": 0,
+            "courseAverageScore": 5
+        },
+        {
+            "_id": "65c0d1baaba3d223ba4e449c",
+            "name": "آموزش داکر",
+            "description": "توضیحات تستی برای دوره آموزش  داکر",
+            "cover": img2,
+            "support": "گروه تلگرامی",
+            "shortName": "docker",
+            "price": 300000,
+            "isComplete": 0,
+            "status": "start",
+            "categoryID": {
+                "_id": "6345cbd132c10de974957632",
+                "title": "برنامه نویسی فرانت اند",
+                "createdAt": "2022-10-11T20:02:25.118Z",
+                "updatedAt": "2022-10-31T12:16:38.299Z",
+                "__v": 0,
+                "name": "frontend"
+            },
+            "creator": {
+                "_id": "634e6b0e1d5142b91afa9bb3",
+                "username": "amin_saeedi",
+                "email": "ce01010101it@gmail.com",
+                "name": "محمدامین سعیدی راد",
+                "role": "ADMIN",
+                "createdAt": "2022-10-18T08:59:58.561Z",
+                "updatedAt": "2022-10-18T08:59:58.561Z",
+                "__v": 0,
+                "profile": "/images/saeedi.png",
+                "phone": "09921558293"
+            },
+            "createdAt": "2022-10-30T23:16:38.317Z",
+            "updatedAt": "2022-10-30T23:16:38.317Z",
+            "__v": 0,
+            "registers": 0,
+            "courseAverageScore": 5
+        },
+    ]
 }
 
 export const dataSlice=createSlice({
@@ -1252,14 +1326,19 @@ export const dataSlice=createSlice({
     reducers:{
         registerUser:(state,action)=>{
             state.userRegister.push(action.payload)
+        },
+        deleteMyCourse:(state,action)=>{
+            state.myCourses = state.myCourses.filter(course => course._id !== action.payload);
+            
         }
     }
 })
 
-export default dataSlice.reducer
-export const { registerUser } = dataSlice.actions
+export default dataSlice.reducer 
+export const { registerUser ,deleteMyCourse } = dataSlice.actions
 export const menuSlice=(state)=>state.dataSlice.menu
 export const allCourse=(state)=>state.dataSlice.allCourse
 export const popularCourse=(state)=>state.dataSlice.popular
 export const presellCourse=(state)=>state.dataSlice.presell
 export const registerUserData=(state)=>state.dataSlice.userRegister
+export const myCourses=(state)=>state.dataSlice.myCourses
