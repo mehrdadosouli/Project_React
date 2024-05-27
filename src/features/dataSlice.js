@@ -8,7 +8,7 @@ import img6 from '../assets/courses/6.png'
 const initialState={
     menu:[
         {id:1,page:'صفحه اصلی',link:'/',icon:''},
-        {id:2,page:'فروشگاه',link:'/shopping',icon:''},
+        {id:2,page:'فروشگاه',link:'/shopping',icon:'',submenu:[]},
         {id:3,page:'فرانت اند',link:'/frontend',icon:'',submenu:[
             {id:1,page:'Html',icon:'',link:'/frontend/html'},
             {id:2,page:'Html',icon:'',link:'/frontend/html'},
@@ -21,8 +21,8 @@ const initialState={
             {id:3,page:'Nodejs',icon:'',link:'/backend/nodejs'},
             {id:4,page:'Nodejs',icon:'',link:'/backend/nodejs'},
         ]},
-        {id:5,page:'ارتباط با ما',link:'/abouteus',icon:''},
-        {id:6,page:'درباره ما',link:'/contactus',icon:''},
+        {id:5,page:'ارتباط با ما',link:'/abouteus',icon:'',submenu:[]},
+        {id:6,page:'درباره ما',link:'/contactus',icon:'',submenu:[]},
 
     ],
     allCourse:[
@@ -1330,15 +1330,36 @@ export const dataSlice=createSlice({
         deleteMyCourse:(state,action)=>{
             state.myCourses = state.myCourses.filter(course => course._id !== action.payload);
             
+        },
+        addNavMenu: (state, action) => {
+            const { menu, submenu, link } = action.payload;
+        
+            if (menu && !submenu) {
+                const newItem = { id: state.menu.length + 1, page: menu, link: `/${link || menu}`, submenu: [] };
+                state.menu.push(newItem);
+            } else if (menu && submenu) {
+                state.menu.forEach(item => {
+                    if (item.page === submenu) {
+                        const newSubmenuItem = { id: item.submenu.length + 1, page: menu, link: `${action.payload.link ? item.link+'/'+action.payload.link : item.link+'/'+action.payload.menu}` };
+                        item.submenu.push(newSubmenuItem);
+                    }
+                });
+            }
+        },
+        deleteNavMenu:(state,action)=>{
+            state.menu=state.menu.filter(item=>item.page !== action.payload)
+            state.menu=state.menu.submenu.filter(item=>item.page !== action.payload)
         }
     }
 })
 
 export default dataSlice.reducer 
-export const { registerUser ,deleteMyCourse } = dataSlice.actions
+export const { registerUser ,deleteMyCourse ,addNavMenu } = dataSlice.actions
 export const menuSlice=(state)=>state.dataSlice.menu
 export const allCourse=(state)=>state.dataSlice.allCourse
 export const popularCourse=(state)=>state.dataSlice.popular
 export const presellCourse=(state)=>state.dataSlice.presell
 export const registerUserData=(state)=>state.dataSlice.userRegister
 export const myCourses=(state)=>state.dataSlice.myCourses
+
+

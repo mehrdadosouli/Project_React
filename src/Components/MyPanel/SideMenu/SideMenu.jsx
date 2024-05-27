@@ -17,6 +17,7 @@ function SideMenu() {
             <div className='[&>*]:text-white flex flex-col gap-10 lg:px-[18%]'>
              <Link to='/mypanel' >پیشخوان</Link>
              <Link to='/mycourses' >دوره های من</Link>
+             <Link to='/mymenu' >منو های من</Link>
              <Link to='/' >خروج</Link>
             </div>
           </div>
