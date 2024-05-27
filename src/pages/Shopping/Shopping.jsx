@@ -9,7 +9,6 @@ export default function Shopping() {
   return (
     <div>
         <Navbar text="black" />
-        <img src="src/assets/image/img.jpg" alt="" className='mb-20' />
         <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-0 gap-10 container'>
             {
                 select.map(elem=><CourseBox item={elem}/>)

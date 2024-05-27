@@ -8,7 +8,6 @@ import Swal from 'sweetalert2'
 export default function MyMenu() {
   const select=useSelector(menuSlice)
   const dispatch=useDispatch()
-  const [flag,setFlag]=useState(false)
   const [data,setData]=useState({
     menu:'',
     submenu:'',
