@@ -1347,14 +1347,25 @@ export const dataSlice=createSlice({
             }
         },
         deleteNavMenu:(state,action)=>{
-            state.menu=state.menu.filter(item=>item.page !== action.payload)
-            state.menu=state.menu.submenu.filter(item=>item.page !== action.payload)
+            const { id, elem } = action.payload
+            const resultsubmenuFind=state.menu.find(itemMenu=>itemMenu.submenu?.find(item=>item.id == id && item.page == elem))           
+            const resultFind=state.menu.find(item=>item.id == id && item.page == elem)           
+            if (resultFind) {
+                state.menu = state.menu?.filter(item => item.id !== id);
+            } else {
+                console.log("Item not found in menu.");
+            }
+            if (resultsubmenuFind) {
+                resultsubmenuFind.submenu = resultsubmenuFind.submenu?.filter(item => item.id !== id);
+            } else {
+                console.log("Item not found in submenu.");
+            }
         }
     }
 })
 
 export default dataSlice.reducer 
-export const { registerUser ,deleteMyCourse ,addNavMenu } = dataSlice.actions
+export const { registerUser ,deleteMyCourse ,addNavMenu ,deleteNavMenu } = dataSlice.actions
 export const menuSlice=(state)=>state.dataSlice.menu
 export const allCourse=(state)=>state.dataSlice.allCourse
 export const popularCourse=(state)=>state.dataSlice.popular

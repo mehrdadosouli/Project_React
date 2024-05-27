@@ -7,7 +7,7 @@ function SideMenu() {
 
 
   return (
-      <div className='sm:relative absolute sm:w-[25%] w-[35%] p-5 flex flex-col z-40'>
+      <div className='sm:relative absolute p-5 flex flex-col z-50'>
           <div className='text-4xl sm:hidden flex hover:cursor-pointer z-20 transform translate-x-0' onClick={()=>{setShowMenu(!showMenu)}}>{!showMenu ? <GiHamburgerMenu /> : <IoClose />}</div>
           <div className={`py-16 flex flex-col gap-10 sm:visible translate-x-[1rem] sm:bg-inherit bg-slate-500 text-center sm:transform-none transform transition-all ease-linear ${showMenu ? 'visible translate-x-[1rem]' : 'invisible translate-x-[10rem]'}`}>
             <div className='flex lg:flex-row flex-col-reverse gap-10 justify-center'>
