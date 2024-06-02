@@ -1317,6 +1317,147 @@ const initialState={
             "registers": 0,
             "courseAverageScore": 5
         },
+    ],
+    allArticles:[
+        {
+            "_id": "636a19a9882118547d70c55f",
+            "title": "مقاله فیک برای تست پیش نویس",
+            "description": "این توضیحات تستی برای پیش نویس مقاله هست",
+            "body": "<p>این یه بادی تستیه</p>",
+            "cover": "da877ea96a7e8f7c9bced14ac791f424af4b0b4eab101ef636545c20e9eed116.jpg",
+            "shortName": "test-link",
+            "categoryID": "635ef447f058a6af04d00510",
+            "creator": null,
+            "publish": 0,
+            "createdAt": "2022-11-08T08:56:09.154Z",
+            "updatedAt": "2022-11-08T08:56:09.154Z",
+            "__v": 0
+        },
+        {
+            "_id": "63619e3b1ad3491377fa251f",
+            "title": "ساخت صفحات 404 جذاب با Css و JS",
+            "description": "ما تو این مقاله یاد میگیریم که چطوری ، ... الی آخر",
+            "body": "<h2>ساخت صفحه 404 مدل فلان</h2><p>ری اکت گل سرسبد فرانت اند محسوب میشود،اگر دوره react را ببینید، بازار کار فرانت اند پیشنهادهای بسیار شگفت انگیزی برای شما خواهد داشت! در این دوره شما آموزش ری اکت رابر اساس تجربیات مدرس در دنیای واقعی و کار با شرکت های مختلف ایرانی یاد می گیرید و در دوره اموزش ری اکت مدرس دوره از نقطه صفر تا رسیدن شما به مرحله پیاده سازی نمونه کار، طراحی رزومه و … استخدام همراه شما خواهد بود. (به این معنی که تا پس از این دوره استخدام نشوید، ما شما را رها نمیکنیم!)</p>",
+            "cover": "a6ffb1ed11bae54f6ef12e55cfa0cc2dfcf640df25b25f70dfa61cbc5703d12f.png",
+            "shortName": "make-creative404-page-with-css-and-js",
+            "categoryID": "6345cbd132c10de974957632",
+            "creator": {
+                "_id": "634e6b0e1d5142b91afa9bb3",
+                "username": "amin_saeedi",
+                "email": "ce01010101it@gmail.com",
+                "name": "محمدامین سعیدی راد",
+                "role": "ADMIN",
+                "createdAt": "2022-10-18T08:59:58.561Z",
+                "updatedAt": "2022-10-18T08:59:58.561Z",
+                "__v": 0,
+                "profile": "/images/saeedi.png",
+                "phone": "09921558293"
+            },
+            "createdAt": "2022-11-01T22:31:23.886Z",
+            "updatedAt": "2022-11-01T22:31:23.886Z",
+            "__v": 0,
+            "publish": 1
+        },
+        {
+            "_id": "63611c981f40070ba1cb22c8",
+            "title": "برای یادگیری ری‌اکت چقدر باید جاوا اسکریپت بلد باشیم؟",
+            "description": "تو این مقاله راجع به فلان فلانم فلان بسزنرحیبسزژ ریبسکنتلزردیسبر",
+            "body": "<h2><strong>معرفی بهترین سایت ‌های آموزش جاوا اسکریپت:</strong></h2><p>&nbsp;</p><p><strong>توجه داشته باشید که تمام وب سایت‌هایی که به عنوان بهترین سایت آموزش جاوا اسکریپت در ادامه معرفی می‌کنیم، بین‌المللی هستند و منابع موجود در آن‌ها به زبان انگلیسی است. در نتیجه شما باید یا تسلط متوسط و حداقلی به زبان انگلیسی داشته باشید و یا اینکه با استفاده از گوگل ترنسلیت منابع موجود را ترجمه کرده و از آن‌ها استفاده کنید. به همین دلیل در انتهای محتوا به شما خواهیم گفت که راه آسان دیگری برای یادگیری زبان جاوا اسکریپت وجود دارد که شما بتوانید به واسطه آن به صورت رایگان و به زبان فارسی این زبان را یاد بگیرید.</strong></p>",
+            "cover": "56108e0f5399b79e348989b1c04f7c2ce3ad429546ed59d1d7420898ca5591c4.png",
+            "shortName": "how-much-js-to-start-react",
+            "categoryID": "6345cbd132c10de974957632",
+            "creator": {
+                "_id": "634e6b0e1d5142b91afa9bb3",
+                "username": "amin_saeedi",
+                "email": "ce01010101it@gmail.com",
+                "name": "محمدامین سعیدی راد",
+                "role": "ADMIN",
+                "createdAt": "2022-10-18T08:59:58.561Z",
+                "updatedAt": "2022-10-18T08:59:58.561Z",
+                "__v": 0,
+                "profile": "/images/saeedi.png",
+                "phone": "09921558293"
+            },
+            "createdAt": "2022-11-01T13:18:16.454Z",
+            "updatedAt": "2022-11-01T13:18:16.454Z",
+            "__v": 0,
+            "publish": 1
+        },
+        {
+            "_id": "635320d83ebf20c2bb34b170",
+            "title": "ترفند های تاریخ و زمان در جاوا اسکریپت",
+            "description": "توضیحات تستی برای مقاله ترفند های تاریخ و زمان در جاوا اسکریپت",
+            "body": "بادی تستی برای مقاله ترفند های تاریخ و زمان در جاوا اسکریپت",
+            "cover": "3.jpg",
+            "shortName": "date-in-js",
+            "categoryID": "6345cbd132c10de974957632",
+            "creator": {
+                "_id": "634e6b0e1d5142b91afa9bb3",
+                "username": "amin_saeedi",
+                "email": "ce01010101it@gmail.com",
+                "name": "محمدامین سعیدی راد",
+                "role": "ADMIN",
+                "createdAt": "2022-10-18T08:59:58.561Z",
+                "updatedAt": "2022-10-18T08:59:58.561Z",
+                "__v": 0,
+                "profile": "/images/saeedi.png",
+                "phone": "09921558293"
+            },
+            "createdAt": "2022-10-21T22:44:40.046Z",
+            "updatedAt": "2022-10-21T22:44:40.046Z",
+            "__v": 0,
+            "publish": 1
+        },
+        {
+            "_id": "63531f323ebf20c2bb34b16b",
+            "title": "چرا انگیولار محبوب نشد؟",
+            "description": "توضیحات تستی برای مقاله چرا انگیولار محبوب نشد؟",
+            "body": "بادی تستی برای مقاله چرا انگیولار محبوب نشد؟",
+            "cover": "3.jpg",
+            "shortName": "why-angular-in-not-popular",
+            "categoryID": "6345cbd132c10de974957632",
+            "creator": {
+                "_id": "634e6b0e1d5142b91afa9bb3",
+                "username": "amin_saeedi",
+                "email": "ce01010101it@gmail.com",
+                "name": "محمدامین سعیدی راد",
+                "role": "ADMIN",
+                "createdAt": "2022-10-18T08:59:58.561Z",
+                "updatedAt": "2022-10-18T08:59:58.561Z",
+                "__v": 0,
+                "profile": "/images/saeedi.png",
+                "phone": "09921558293"
+            },
+            "createdAt": "2022-10-21T22:37:38.367Z",
+            "updatedAt": "2022-10-21T22:37:38.367Z",
+            "__v": 0,
+            "publish": 1
+        },
+        {
+            "_id": "63531ca63ebf20c2bb34b15c",
+            "title": "مقایسه ویو و ری اکت",
+            "description": "توضیحات تستی برای مقاله مقایسه ویو و ری اکت",
+            "body": "بادی تستی برای مقاله مقایسه ویو و ری اکت",
+            "cover": "3.jpg",
+            "shortName": "vue-or-react",
+            "categoryID": "6345cbd132c10de974957632",
+            "creator": {
+                "_id": "634e6b0e1d5142b91afa9bb3",
+                "username": "amin_saeedi",
+                "email": "ce01010101it@gmail.com",
+                "name": "محمدامین سعیدی راد",
+                "role": "ADMIN",
+                "createdAt": "2022-10-18T08:59:58.561Z",
+                "updatedAt": "2022-10-18T08:59:58.561Z",
+                "__v": 0,
+                "profile": "/images/saeedi.png",
+                "phone": "09921558293"
+            },
+            "createdAt": "2022-10-21T22:26:46.878Z",
+            "updatedAt": "2022-10-21T22:26:46.878Z",
+            "__v": 0,
+            "publish": 1
+        }
     ]
 }
 
@@ -1372,5 +1513,6 @@ export const popularCourse=(state)=>state.dataSlice.popular
 export const presellCourse=(state)=>state.dataSlice.presell
 export const registerUserData=(state)=>state.dataSlice.userRegister
 export const myCourses=(state)=>state.dataSlice.myCourses
+export const allArticles=(state)=>state.dataSlice.allArticles
 
 
