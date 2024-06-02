@@ -1,6 +1,3 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import Article from '../Article/Article'
 import { useSelector } from 'react-redux'
 import { allArticles } from '../../features/dataSlice'

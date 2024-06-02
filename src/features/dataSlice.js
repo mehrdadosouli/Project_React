@@ -21,8 +21,8 @@ const initialState={
             {id:3,page:'Nodejs',icon:'',link:'/backend/nodejs'},
             {id:4,page:'Nodejs',icon:'',link:'/backend/nodejs'},
         ]},
-        {id:5,page:'ارتباط با ما',link:'/abouteus',icon:'',submenu:[]},
-        {id:6,page:'درباره ما',link:'/contactus',icon:'',submenu:[]},
+        {id:5,page:'ارتباط با ما',link:'/abouteus',icon:''},
+        {id:6,page:'درباره ما',link:'/contactus',icon:''},
 
     ],
     allCourse:[
