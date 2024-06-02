@@ -8,7 +8,7 @@ export default function Help() {
   return (
     <div className='grid lg:grid-cols-2 grid-cols-1 gap-20 py-10 container'>
         {
-            title.map(item=><div key={item.id} className='flex gap-5 items-center shadow-lg rounded-2xl p-5' data-aos="fade-up" data-aos-duration="1000" >
+            title.map(item=><div key={item.id} className='flex gap-5 items-center shadow-lg rounded-2xl p-5' data-aos="fade-up" data-aos-duration="1000"  data-aos-once="true" >
                 <span className='text-6xl text-gray-600'>{item.icon}</span>
                 <div className='flex flex-col'>
                     <span>{item.name}</span>
