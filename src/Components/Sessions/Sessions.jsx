@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { getToken } from '../../utils/funcs';
 
 function Sessions({data}) {
@@ -8,8 +8,9 @@ function Sessions({data}) {
   const [Id,setId]=useState(null)
   const [show,setShow]=useState(false)
   const location=useLocation()
-  const param=new URLSearchParams(location.search).get('name')
-  console.log(data);
+  // const param=new URLSearchParams(location.search).get('name')
+  const [param,setParam]=useSearchParams()
+  const queryParam =param.get('name')
   const accordionHandler=(e)=>{
     setShow(!show)
     let panel=e.target.nextElementSibling
@@ -27,7 +28,7 @@ function Sessions({data}) {
                 <span>{index + 1}
                 {(isLogin && elem.free || elem.free) ?
                 <>
-                  <Link to={{pathname:`/episode`, search:`?name=${param}&id${index}=${elem._id}`}} >{elem.title}</Link>
+                  <Link to={{pathname:`/episode`, search:`?name=${queryParam}&id=${elem._id}`}} >{elem.title}</Link>
                 </>
                 : 
                 <span className='text-slate-300'>{elem.title}</span>}</span>

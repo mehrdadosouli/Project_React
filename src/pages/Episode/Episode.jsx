@@ -25,21 +25,21 @@ function Episode() {
   const name=search.get('name')
 
   const select=useSelector(allCourse)
-
-const sessionOne=select.find(elem=>{
-  if(elem.sessions){
-    return elem.sessions
-  }
-})
-
-const filterSession=sessionOne.sessions.find(item=>item._id == id)
+  
+  const sessionOne=select.find(elem=>{
+    if(elem.sessions){
+      return elem.sessions
+    }
+  })
+  
+  const filterSession=sessionOne.sessions.find(item=>item._id == id)
 
   return (
     <div className="bg-[#1C1C28] text-white">
       <div className=" container py-10">
       <Navbar text="white" />
-        <div className="flex gap-10 my-10">
-          <div className="w-3/4 h-full bg-[#32334D] flex flex-col rounded-3xl">
+        <div className="flex md:flex-row flex-col gap-10 my-10">
+          <div className="md:w-3/4 w-full h-full bg-[#32334D] flex flex-col rounded-3xl">
             <div className="p-10 text-white">
               <h2>{filterSession && filterSession.title}</h2> 
             </div>
@@ -52,7 +52,7 @@ const filterSession=sessionOne.sessions.find(item=>item._id == id)
             ></video>
             </div>
           </div>
-          <div className="w-1/2 flex flex-col gap-10 text-white bg-[#32334D] rounded-3xl">
+          <div className="md:w-1/2 w-full flex flex-col gap-10 text-white bg-[#32334D] rounded-3xl">
            <Sessions data={sessionOne} /> 
           </div>
         </div>
