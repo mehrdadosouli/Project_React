@@ -53,4 +53,7 @@
     z-index: -1;
     border-radius: 5px;
   }
+  .transition-1{
+    transition: all .75s ease-out;
+  }
 }
