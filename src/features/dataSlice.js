@@ -5,6 +5,7 @@ import img3 from '../assets/courses/3.png'
 import img4 from '../assets/courses/4.png'
 import img5 from '../assets/courses/5.png'
 import img6 from '../assets/courses/6.png'
+import img7 from '../assets/image/1.gif'
 const initialState={
     menu:[
         {id:1,page:'صفحه اصلی',link:'/',icon:''},
@@ -1324,7 +1325,7 @@ const initialState={
             "title": "مقاله فیک برای تست پیش نویس",
             "description": "این توضیحات تستی برای پیش نویس مقاله هست",
             "body": "<p>این یه بادی تستیه</p>",
-            "cover": "da877ea96a7e8f7c9bced14ac791f424af4b0b4eab101ef636545c20e9eed116.jpg",
+            "cover": img7,
             "shortName": "test-link",
             "categoryID": "635ef447f058a6af04d00510",
             "creator": null,
@@ -1338,7 +1339,7 @@ const initialState={
             "title": "ساخت صفحات 404 جذاب با Css و JS",
             "description": "ما تو این مقاله یاد میگیریم که چطوری ، ... الی آخر",
             "body": "<h2>ساخت صفحه 404 مدل فلان</h2><p>ری اکت گل سرسبد فرانت اند محسوب میشود،اگر دوره react را ببینید، بازار کار فرانت اند پیشنهادهای بسیار شگفت انگیزی برای شما خواهد داشت! در این دوره شما آموزش ری اکت رابر اساس تجربیات مدرس در دنیای واقعی و کار با شرکت های مختلف ایرانی یاد می گیرید و در دوره اموزش ری اکت مدرس دوره از نقطه صفر تا رسیدن شما به مرحله پیاده سازی نمونه کار، طراحی رزومه و … استخدام همراه شما خواهد بود. (به این معنی که تا پس از این دوره استخدام نشوید، ما شما را رها نمیکنیم!)</p>",
-            "cover": "a6ffb1ed11bae54f6ef12e55cfa0cc2dfcf640df25b25f70dfa61cbc5703d12f.png",
+            "cover": img7,
             "shortName": "make-creative404-page-with-css-and-js",
             "categoryID": "6345cbd132c10de974957632",
             "creator": {
@@ -1363,7 +1364,7 @@ const initialState={
             "title": "برای یادگیری ری‌اکت چقدر باید جاوا اسکریپت بلد باشیم؟",
             "description": "تو این مقاله راجع به فلان فلانم فلان بسزنرحیبسزژ ریبسکنتلزردیسبر",
             "body": "<h2><strong>معرفی بهترین سایت ‌های آموزش جاوا اسکریپت:</strong></h2><p>&nbsp;</p><p><strong>توجه داشته باشید که تمام وب سایت‌هایی که به عنوان بهترین سایت آموزش جاوا اسکریپت در ادامه معرفی می‌کنیم، بین‌المللی هستند و منابع موجود در آن‌ها به زبان انگلیسی است. در نتیجه شما باید یا تسلط متوسط و حداقلی به زبان انگلیسی داشته باشید و یا اینکه با استفاده از گوگل ترنسلیت منابع موجود را ترجمه کرده و از آن‌ها استفاده کنید. به همین دلیل در انتهای محتوا به شما خواهیم گفت که راه آسان دیگری برای یادگیری زبان جاوا اسکریپت وجود دارد که شما بتوانید به واسطه آن به صورت رایگان و به زبان فارسی این زبان را یاد بگیرید.</strong></p>",
-            "cover": "56108e0f5399b79e348989b1c04f7c2ce3ad429546ed59d1d7420898ca5591c4.png",
+            "cover": img7,
             "shortName": "how-much-js-to-start-react",
             "categoryID": "6345cbd132c10de974957632",
             "creator": {
@@ -1388,7 +1389,7 @@ const initialState={
             "title": "ترفند های تاریخ و زمان در جاوا اسکریپت",
             "description": "توضیحات تستی برای مقاله ترفند های تاریخ و زمان در جاوا اسکریپت",
             "body": "بادی تستی برای مقاله ترفند های تاریخ و زمان در جاوا اسکریپت",
-            "cover": "3.jpg",
+            "cover": img7,
             "shortName": "date-in-js",
             "categoryID": "6345cbd132c10de974957632",
             "creator": {
@@ -1413,7 +1414,7 @@ const initialState={
             "title": "چرا انگیولار محبوب نشد؟",
             "description": "توضیحات تستی برای مقاله چرا انگیولار محبوب نشد؟",
             "body": "بادی تستی برای مقاله چرا انگیولار محبوب نشد؟",
-            "cover": "3.jpg",
+            "cover": img7,
             "shortName": "why-angular-in-not-popular",
             "categoryID": "6345cbd132c10de974957632",
             "creator": {
@@ -1438,7 +1439,7 @@ const initialState={
             "title": "مقایسه ویو و ری اکت",
             "description": "توضیحات تستی برای مقاله مقایسه ویو و ری اکت",
             "body": "بادی تستی برای مقاله مقایسه ویو و ری اکت",
-            "cover": "3.jpg",
+            "cover": img7,
             "shortName": "vue-or-react",
             "categoryID": "6345cbd132c10de974957632",
             "creator": {

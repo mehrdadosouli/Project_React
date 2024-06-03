@@ -14,7 +14,7 @@ export default function Landing() {
 
   return (
     <>
-        <div className='sticky sm:bg-bg_landing w-full h-[30rem] sm:h-[52.5rem] md:h-[61.9rem] bg-[url("https://www.vecteezy.com/photo/35676752-ai-generated-nighttime-programmer-with-dual-monitors-and-holographic-globe")] bg-top bg-no-repeat sm:bg-cover sm:bg-center bg-fixed'>
+        <div className='sticky sm:bg-bg_landing w-full h-[30rem] sm:h-[52.5rem] md:h-[61.9rem] bg-mobile bg-top bg-no-repeat sm:bg-cover sm:bg-center bg-fixed'>
             <h1 className="font-extrabold landing__title absolute lg:top-[65%] lg:left-[30%] top-[60%] left-[20%] text-white md:text-6xl sm:text-4xl text-3xl">
             <Typewriter
                 onInit={(typeWriter) => {

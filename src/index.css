@@ -56,4 +56,7 @@
   .transition-1{
     transition: all .75s ease-out;
   }
+  .bg-mobile{
+    background-image: url('../src/assets/image/636252530fda8658687d581c.jpg');
+  }
 }

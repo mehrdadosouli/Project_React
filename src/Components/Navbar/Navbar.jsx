@@ -40,7 +40,7 @@ export default function Navbar({ text }) {
                 </div>
                 <div className="left flex items-center md:gap-5">
                     {
-                        !user ? <span className={`md:p-1 p-3 text-sm md:text-2xl text-${text}`}><Link to="/login" >Login</Link></span> : (<Link to='/mypanel' className={`md:p-2 text-sm md:text-3xl  text-${text}`}>{user.name}</Link>)
+                        !user ? <span className={`md:p-1 p-3 text-lg md:text-2xl text-${text}`}><Link to="/login" >Login</Link></span> : (<Link to='/mypanel' className={`md:p-2 text-lg md:text-3xl  text-${text}`}>{user.name}</Link>)
                     }
                     {
                         user && <Link onClick={logOutHandler} to='/login' className={`p-3 rounded-lg ml-3 text-${text}`}>LogOut</Link>
