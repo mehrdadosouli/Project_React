@@ -13,7 +13,8 @@ import AllCourses from './pages/AllCourses/AllCourses'
 import AllArticles from './pages/AllArticles/AllArticles'
 import Shopping from './pages/Shopping/Shopping'
 import MyMenu from './Components/MyPanel/MyMenu/MyMenu'
-
+import FrontEndPage from './pages/FrontEndPage/FrontEndPage'
+import BackendPage from './pages/BackendPage/BackendPage'
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route path='/login' element={<Login />} /> 
         <Route path='/register' element={<Register />} /> 
         <Route path='/mypanel' element={<MyPanel />} /> 
+        <Route path='/frontend' element={<FrontEndPage />} /> 
+        <Route path='/backend' element={<BackendPage />} /> 
         <Route path='/shopping' element={<Shopping />} /> 
         <Route path='/mycourses' element={<MyCourse />} /> 
         <Route path='/courses' element={<Courses />} /> 

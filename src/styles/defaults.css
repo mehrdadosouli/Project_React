@@ -1,16 +1,15 @@
-/* Start Default Styles */
-
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-  }
-  
-  body {
-    line-height: 1.6;
-    font-size: 1.6rem;
-    font-family: var(--primary-font);
-    direction: rtl;
-  }
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  direction: rtl;
+}
+
   
   *,
   *::after,
@@ -29,6 +28,3 @@ html {
   input,button{
     border: 1px solid gray;
   }
-  
-  /* Finish Default Styles */
-  

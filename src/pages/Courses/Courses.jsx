@@ -13,16 +13,16 @@ function Courses() {
   const navigate = useNavigate()
   const select = useSelector(allCourse)
   const [course, setCourse] = useState(null)
-
-
+  const params = searchParam.get('name')
+  
+  
   useEffect(() => {
-    const params = searchParam.get('name')
     const filteringCourseUrl = async () => {
       const filterCategory = await select.filter(item => item.shortName === params)
       await setCourse(filterCategory)
     }
     filteringCourseUrl()
-  }, [])
+  }, [params])
 
 
   if (course && course[0].categoryID) {
