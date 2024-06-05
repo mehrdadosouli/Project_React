@@ -21,13 +21,13 @@ function CourseUser({data}) {
                 <Link to={`/courses?name=${item.shortName}`}>
                   <img src={`/src/assets/courses/${item.cover.split('/')[4].split('.')[0]}.png`} alt="" className="w-full " />
                   </Link>
-                <div className="bg-[#28293D] flex flex-col p-5 justify-between min-h-32">
+                <div className="bg-bg-primary-light flex flex-col p-5 justify-between min-h-32">
                     {/* <h3><Link className="text-white" to={{pathname:'/courses',search:`?name=${item.course.shortName}` }}>{item.course.name}</Link></h3> */}
                     <h3 className="md:text-2xl text-lg"><Link to={`/courses?name=${item.shortName}`}>{item.name}</Link></h3>
                     <h4 className="md:text-2xl text-lg">{item.isComplete ? "دوره به اتمام رسیده" : "دوره در حال ضبط است"}</h4>
                 </div>
                     {
-                      loc == '/mycourses' && <div className="bg-[#28293D]"><button className="bg-red-400 rounded-2xl overflow-hidden p-2 m-2 hover:cursor-pointer" onClick={()=>deleteHandler(item._id)}>delete</button></div> 
+                      loc == '/mycourses' && <div className="bg-bg-primary-light"><button className="bg-red-400 rounded-2xl overflow-hidden p-2 m-2 hover:cursor-pointer" onClick={()=>deleteHandler(item._id)}>delete</button></div> 
                     }
                 </div>)
             : 

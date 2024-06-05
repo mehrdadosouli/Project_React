@@ -20,7 +20,7 @@ function MyCourse() {
   return (
     <div className='w-full bg-bg-panel min-h-screen md:p-32 p-10 text-white'>
       <PanelInfoBox info={data} />
-        <div className='flex flex-row justify-between bg-[#1C1C28]'>
+        <div className='flex flex-row justify-between bg-bg-primary-dark'>
           <SideMenu />
           <div className="md:w-2/3 w-full p-10">
           {

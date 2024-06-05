@@ -21,5 +21,8 @@ const setToLocalStorage=(key,value)=>{
 const clearLocalStorage=()=>{
     return localStorage.clear()
 }
+const scrollToTop=()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
-export {navbarMenuRandom ,getToken ,setToLocalStorage,clearLocalStorage}
+export {navbarMenuRandom ,getToken ,setToLocalStorage,clearLocalStorage,scrollToTop}

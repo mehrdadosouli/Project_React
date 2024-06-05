@@ -18,7 +18,7 @@ function Sessions({data}) {
     panel.style.maxHeight=panel.style.maxHeight ? null : panel.scrollHeight + "px"
   }
   return (
-    <div className='bg-[#28293D] text-white my-10 p-5 w-full rounded-3xl'>
+    <div className='bg-bg-primary-light text-white my-10 p-5 w-full rounded-3xl'>
         <h4 className='text-white'>سر فصل ها</h4>
           <div className='m-10 bg-[#32334D] flex flex-col'>
             <div className={`cursor-pointer p-10 ${show && "bg-[#32335D] mb-5"}`} onClick={accordionHandler}>{data.name}</div>
@@ -51,7 +51,7 @@ export default Sessions
 // function Sessions({data}) {
 //   const isLogin=getToken('user')
 //   return (
-//     <div className=' bg-[#28293D] text-white p-5 w-full rounded-3xl'>
+//     <div className=' bg-bg-primary-light text-white p-5 w-full rounded-3xl'>
 //         <h4 className='text-white'>سر فصل ها</h4>
 //           <div className='m-5 bg-[#32334D] flex flex-col rounded-3xl overflow-hidden'>
 //             <div className={`cursor-pointer p-10 bg-[#32335D] mb-5 text-white`} >{data.name}</div>

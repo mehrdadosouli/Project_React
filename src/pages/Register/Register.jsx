@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { setToLocalStorage } from "../../utils/funcs";
+import { scrollToTop, setToLocalStorage } from "../../utils/funcs";
 import { registerUser } from "../../features/dataSlice";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';

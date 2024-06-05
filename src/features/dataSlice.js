@@ -20,10 +20,10 @@ const initialState={
             {id:7,page:'دوره NPM برای برنامه نویسان جاوا اسکریپت',icon:'',link:'/courses?name=npm'},
         ]},
         {id:4,page:'بک اند',link:'/backend',icon:'',submenu:[
-            {id:1,page:'Nodejs',icon:'',link:'/backend/nodejs'},
-            {id:2,page:'Nodejs',icon:'',link:'/backend/nodejs'},
-            {id:3,page:'Nodejs',icon:'',link:'/backend/nodejs'},
-            {id:4,page:'Nodejs',icon:'',link:'/backend/nodejs'},
+            {id:1,page:'آموزش داکر',icon:'',link:'/courses?name=docker'},
+            {id:2,page:'آموزش مونگو mongo',icon:'',link:'/courses?name=mongo-course'},
+            {id:3,page:'آموزش دیتابیس Mysql',icon:'',link:'/courses?name=mysql-course'},
+            {id:4,page:'دوره جامع Nodejds برای ‌بازار کار',icon:'',link:'/courses?name=node-expert'},
         ]},
     ],
     allCourse:[
@@ -1233,7 +1233,7 @@ const initialState={
         },
         {
             "_id": "6345cda6474f74e04218f6f7",
-            "name": "دوره جامع Nodejds برای‌بازار کار",
+            "name": "دوره جامع Nodejds برای‌ بازار کار",
             "description": "توضیحات تستی برای دوره ری‌اکت سبزلرن",
             "cover": img5,
             "shortName": "node-expert",

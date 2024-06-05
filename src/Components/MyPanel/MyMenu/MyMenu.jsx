@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addNavMenu, deleteNavMenu, menuSlice } from "../../../features/dataSlice";
 import SideMenu from "../SideMenu/SideMenu";
-import Navbar from '../../../Components/Navbar/Navbar'
 import Swal from 'sweetalert2'
+import { scrollToTop } from "../../../utils/funcs";
 
 export default function MyMenu() {
   const select=useSelector(menuSlice)
@@ -48,18 +48,16 @@ export default function MyMenu() {
     })
   }
 
+  scrollToTop()
 
   return (
     <div className="w-full flex bg-bg-panel min-h-screen gap-10 md:p-32 p-10 ">
-      <div className="absolute top-0 transform -translate-x-1/2">
-      <Navbar />
-      </div>
       <div className="">
         <SideMenu />
       </div>
       <div className="flex flex-col">
        <h3 className="mx-auto pb-10 text-white font-extrabold">ایجاد منو</h3>
-        <form className="h-fit flex flex-wrap justify-between items-start p-10 bg-[#1C1C28] " onSubmit={submitHandler}>
+        <form className="h-fit flex flex-wrap justify-between items-start p-10 bg-bg-primary-dark " onSubmit={submitHandler}>
           <div className="flex flex-wrap md:flex-row flex-col gap-x-10 gap-y-10">
            <div className="flex gap-x-10">
            <label className="text-white" htmlFor="menu">منو اصلی</label>
@@ -82,9 +80,10 @@ export default function MyMenu() {
         </form>
 
         <h3 className="mx-auto my-10 pb-10 text-center text-white font-extrabold">حذف منو</h3>
-        <div className="flex flex-col gap-10 p-10 w-full bg-[#1C1C28] text-white">
+        <div className="flex flex-col gap-10 p-10 w-full bg-bg-primary-dark text-white">
+          
             {
-              select.map(item=><div key={item.id} className="flex gap-5">
+              select.map(item=><div key={item.id} className="flex flex-wrap gap-5">
                <div className="flex items-center gap-5">
                   <span>{item.page}</span>
                   <button className="p-2 rounded-xl text-red-400" onClick={()=>deleteHandler(item.page,item.id)}>delete</button>
@@ -96,6 +95,7 @@ export default function MyMenu() {
                   <button className="p-2 rounded-xl text-red-400" onClick={()=>deleteHandler(elem.page,elem.id)}>delete</button>
                 </div>)
                }
+               <h6 className="w-full border-solid border-gray-600 border-b-[1px]"></h6>
               </div>)
             }
         </div>

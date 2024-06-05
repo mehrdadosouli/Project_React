@@ -25,9 +25,9 @@ function Courses() {
   }, [params])
 
 
-  if (course && course[0].categoryID) {
+  if (course && params && course[0].categoryID) {
     return (
-      <div className="bg-[#1C1C28] text-white">
+      <div className="bg-bg-primary-dark text-white">
         <div className="container py-10">
           <Navbar text="white" />
           <div className="flex md:flex-row flex-col md:items-center gap-10 my-10">
@@ -50,7 +50,7 @@ function Courses() {
                 <StatusBox status='دسته بندی' value={course[0].categoryID.name} />
               </div>
             </div>
-            <div className="md:w-1/2 w-full p-10 bg-[#28293D] gap-10 rounded-3xl flex flex-col justify-center items-center">
+            <div className="md:w-1/2 w-full p-10 bg-bg-primary-light gap-10 rounded-3xl flex flex-col justify-center items-center">
               <div className="flex w-full gap-10">
                 <StatusBox status='تعداد دانشجو' value={course[0].courseStudentsCount ? course[0].courseStudentsCount : "0"} />
                 <StatusBox status='پشتیبانی' value={course[0].support ? course[0].support : "-"} />
@@ -72,7 +72,7 @@ function Courses() {
     );
   } else {
     return (
-      <div><h2>دوره ای نداریم با این مشخصات</h2></div>
+      navigate('/shopping')
     )
   }
 }

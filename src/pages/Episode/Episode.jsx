@@ -35,7 +35,7 @@ function Episode() {
   const filterSession=sessionOne.sessions.find(item=>item._id == id)
 
   return (
-    <div className="bg-[#1C1C28] text-white">
+    <div className="bg-bg-primary-dark text-white">
       <div className=" container py-10">
       <Navbar text="white" />
         <div className="flex md:flex-row flex-col gap-10 my-10">

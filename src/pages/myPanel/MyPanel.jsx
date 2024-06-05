@@ -8,9 +8,6 @@ import { useSelector } from 'react-redux'
 import { myCourses } from '../../features/dataSlice'
 
 
-
-
-
 function MyPanel() {
 
   const select=useSelector(myCourses) 
@@ -24,7 +21,7 @@ function MyPanel() {
   return (
     <div className='w-full bg-bg-panel min-h-screen md:p-32 p-10 text-white'>
         <PanelInfoBox info={info} />
-        <div className='flex flex-row justify-between bg-[#1C1C28]'>
+        <div className='flex flex-row justify-between bg-bg-primary-dark'>
           <SideMenu />
           <div className="md:w-2/3 w-full flex xl:flex-row flex-col gap-10 p-10">
             <div className="xl:w-1/2 w-full">
@@ -32,7 +29,7 @@ function MyPanel() {
                 courses.length ? <CourseUser data={courses} /> : <span>هیچ دوره ای ندارید</span>
               }
             </div>
-            <div className="xl:w-1/2 w-full bg-[#28293D] rounded-3xl p-10">
+            <div className="xl:w-1/2 w-full bg-bg-primary-light rounded-3xl p-10">
               <LastTickets />
             </div>
           </div>

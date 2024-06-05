@@ -59,4 +59,10 @@
   .bg-mobile{
     background-image: url('../src/assets/image/636252530fda8658687d581c.jpg');
   }
+  .clip-polygon {
+    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 15% 100%, 0% 50%, 15% 0%)
+  }
+  .clip-polygon2 {
+    clip-path: polygon(100% 0%, 95% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%)
+  }
 }
