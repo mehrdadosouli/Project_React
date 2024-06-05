@@ -51,10 +51,8 @@ export default function MyMenu() {
   scrollToTop()
 
   return (
-    <div className="w-full flex bg-bg-panel min-h-screen gap-10 md:p-32 p-10 ">
-      <div className="">
+    <div className="w-full flex bg-bg-panel min-h-screen gap-10 md:p-32 p-10 "> 
         <SideMenu />
-      </div>
       <div className="flex flex-col">
        <h3 className="mx-auto pb-10 text-white font-extrabold">ایجاد منو</h3>
         <form className="h-fit flex flex-wrap justify-between items-start p-10 bg-bg-primary-dark " onSubmit={submitHandler}>

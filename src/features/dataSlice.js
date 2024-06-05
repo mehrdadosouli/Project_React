@@ -1256,7 +1256,7 @@ const initialState={
             "registers": 2,
             "courseAverageScore": 5
         }
-        ],
+    ],
     frontend:[
     {
         "_id": "65c0d36eaba3d223ba4e44a3",
@@ -2690,12 +2690,20 @@ export const dataSlice=createSlice({
             } else {
                 console.log("Item not found in submenu.");
             }
+        },
+        addCourse:(state,action)=>{
+            if(action.payload.menu == 'فرانت اند'){
+                state.frontend.push(action.payload)
+                console.log(state.frontend);
+            }else{
+                state.backend.push(action.payload)
+            }
         }
     }
 })
 
 export default dataSlice.reducer 
-export const { registerUser ,deleteMyCourse ,addNavMenu ,deleteNavMenu } = dataSlice.actions
+export const { registerUser ,deleteMyCourse ,addNavMenu ,deleteNavMenu ,addCourse } = dataSlice.actions
 export const menuSlice=(state)=>state.dataSlice.menu
 export const allCourse=(state)=>state.dataSlice.allCourse
 export const popularCourse=(state)=>state.dataSlice.popular
@@ -2705,4 +2713,5 @@ export const myCourses=(state)=>state.dataSlice.myCourses
 export const allArticles=(state)=>state.dataSlice.allArticles
 export const frontend=(state)=>state.dataSlice.frontend
 export const backend=(state)=>state.dataSlice.backend
+
 

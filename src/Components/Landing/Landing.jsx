@@ -14,7 +14,7 @@ export default function Landing() {
 
   return (
     <>
-        <div className='sticky md:bg-bg_landing bg-bg_mobile bg-cover w-full h-[30rem] sm:h-[52.5rem] md:h-[61.9rem] bg-no-repeat bg-fixed'>
+        <div className='sticky md:bg-bg_landing bg-bg_mobile bg-cover w-full h-[80vh] bg-no-repeat bg-fixed'>
             <h1 className="font-extrabold landing__title absolute lg:top-[65%] lg:left-[30%] top-[60%] left-[20%] text-white md:text-6xl sm:text-4xl text-3xl">
             <Typewriter
                 onInit={(typeWriter) => {

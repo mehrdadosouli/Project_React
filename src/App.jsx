@@ -15,6 +15,7 @@ import FrontEndPage from './pages/FrontEndPage/FrontEndPage'
 import BackendPage from './pages/BackendPage/BackendPage'
 import NotFound from './pages/NotFound/NotFound'
 import { scrollToTop } from './utils/funcs'
+import AddCourse from './Components/MyPanel/AddCourse/AddCourse'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path='/courses' element={<Courses />} /> 
         <Route path='/episode' element={<Episode />} />
         <Route path='/mymenu' element={<MyMenu />} />
+        <Route path='/addCourse' element={<AddCourse />} />
         <Route path='/allarticles' element={<AllArticles />} />
         <Route path='/notfound' element={<NotFound />} />
         <Route path='*' element={<Navigate replace to='/notfound' />}  />
