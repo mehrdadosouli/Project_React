@@ -54,7 +54,7 @@
     border-radius: 5px;
   }
   .transition-1{
-    transition: all .75s ease-out;
+    transition: all .1s ease-out;
   }
   .bg-mobile{
     background-image: url('../src/assets/image/636252530fda8658687d581c.jpg');

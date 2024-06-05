@@ -10,7 +10,9 @@ export default {
         'bg_landing':"url('assets/image/main.jpg')",
       },
       backgroundColor:{
-        'bg-panel':'#28293D'
+        'bg-panel':'#28293D',
+        'bg-primary-dark':'#1C1C28',
+        'bg-primary-light':'#28293D',
       }
     },
   },
