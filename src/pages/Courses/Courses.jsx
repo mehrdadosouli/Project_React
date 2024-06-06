@@ -14,7 +14,7 @@ function Courses() {
   const select = useSelector(allCourse)
   const [course, setCourse] = useState(null)
   const params = searchParam.get('name')
-  
+  console.log(select);
   
   useEffect(() => {
     const filteringCourseUrl = async () => {

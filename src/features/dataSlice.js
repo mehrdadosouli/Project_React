@@ -2692,18 +2692,23 @@ export const dataSlice=createSlice({
             }
         },
         addCourse:(state,action)=>{
+            state.allCourse.push(action.payload)
             if(action.payload.menu == 'فرانت اند'){
                 state.frontend.push(action.payload)
-                console.log(state.frontend);
             }else{
                 state.backend.push(action.payload)
             }
-        }
+        },
+        deleteCourse:(state,action)=>{
+           state.allCourse= state.allCourse.filter(item=>item._id !== action.payload._id)
+           state.frontend= state.frontend.filter(item=>item._id !== action.payload._id)
+           state.backend= state.backend.filter(item=>item._id !== action.payload._id)
+        },
     }
 })
 
 export default dataSlice.reducer 
-export const { registerUser ,deleteMyCourse ,addNavMenu ,deleteNavMenu ,addCourse } = dataSlice.actions
+export const { registerUser ,deleteMyCourse ,addNavMenu ,deleteNavMenu ,addCourse,deleteCourse } = dataSlice.actions
 export const menuSlice=(state)=>state.dataSlice.menu
 export const allCourse=(state)=>state.dataSlice.allCourse
 export const popularCourse=(state)=>state.dataSlice.popular

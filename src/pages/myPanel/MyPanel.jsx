@@ -21,7 +21,7 @@ function MyPanel() {
   return (
     <div className='w-full bg-bg-panel min-h-screen md:p-32 p-10 text-white'>
         <PanelInfoBox info={info} />
-        <div className='flex flex-row justify-between bg-bg-primary-dark'>
+        <div className='flex md:flex-row justify-between bg-bg-primary-dark'>
           <SideMenu />
           <div className="md:w-2/3 w-full flex xl:flex-row flex-col gap-10 p-10">
             <div className="xl:w-1/2 w-full">
