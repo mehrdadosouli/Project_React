@@ -39,4 +39,3 @@ function MyPanel() {
 }
 
 export default MyPanel
-
